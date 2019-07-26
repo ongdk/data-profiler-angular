@@ -1,14 +1,14 @@
 <nav class="row">
   <div class="col-12">
     <div class="header">
-      header
+      EDP header
     </div>
   </div>
 </nav>
 <div class="container-fluid">
   <div class="row">
     <div class="col-3 bd-sidebar">
-      <div class="dropdown show">
+<!--       <div class="dropdown show">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
         </a>
@@ -19,9 +19,36 @@
         </div>
       </div>
       <h6>Table name: {{ data?.file_name }}</h6>
-      <li *ngFor="let col of data?.columns">
-        {{ col.name }}
-      </li>
+      <a *ngFor="let col of data?.columns" routerLink="/dashboard">{{ col.name }}</a> -->
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Data Profiler</h3>
+        </div>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+
+
+        <ul class="list-unstyled components">
+            <p>Table name: {{ data?.file_name }}</p>
+            <li *ngFor="let col of data?.columns">
+                <a href="#">{{ col.name }}</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
     </div>
     <div class="col-9 bd-content">
       <div class="container">

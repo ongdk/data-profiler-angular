@@ -1,0 +1,40 @@
+[
+{
+  "database": "db1",
+  "tables": [
+  {
+    "name": "table1a"
+  },
+  {
+    "name": "table1b"
+  },
+  {
+    "name": "table1c"
+  }]
+},
+{
+  "database": "db2",
+  "tables": [
+  {
+    "name": "table2a"
+  },
+  {
+    "name": "table2b"
+  },
+  {
+    "name": "table2c"
+  }]
+},
+{
+  "database": "db3",
+  "tables": [
+  {
+    "name": "table3a"
+  },
+  {
+    "name": "table3b"
+  },
+  {
+    "name": "table3c"
+  }]
+}]

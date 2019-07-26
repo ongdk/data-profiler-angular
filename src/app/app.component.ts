@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   data: Data;
+  tables = ["table1","table2"];
 
   ngOnInit() {
     this.getData();
