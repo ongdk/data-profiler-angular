@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+  /*font-family: Lato;
+  color: white;
+  background-color: #353d47;
+  margin:20px*/
+  /*width: 100%;*/
+  /*margin: 0;
+  padding: 0;*/
+}
+
+
+.header {
+	background: blue;
+	height: 40px;
+	padding: 20px;
+}
+
+text{
+	fill: white;
+}
+
+.bd-sidebar {
+    position: sticky;
+    display:block;
+    top: 100px;
+    height: calc(100vh - 60px );
+    background: red;
+}
+
+.bd-content {
+    background: yellow;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
