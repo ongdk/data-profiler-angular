@@ -12,4 +12,8 @@ export class DataService {
   getData(){
 	return this.httpService.get('./assets/data.json');
 }
+
+  getDbTableNames(){
+  	return this.httpService.get('./assets/db_table_names.json');
+  }
 }

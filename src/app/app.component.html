@@ -8,47 +8,36 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-3 bd-sidebar">
-<!--       <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-      <h6>Table name: {{ data?.file_name }}</h6>
-      <a *ngFor="let col of data?.columns" routerLink="/dashboard">{{ col.name }}</a> -->
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
+      <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+          <div class="sidebar-header">
             <h3>Data Profiler</h3>
-        </div>
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-
-
-
-        <ul class="list-unstyled components">
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ dbString }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a *ngFor="let db of data_table_names" (click)="setDb(db)" class="dropdown-item" href="#">{{ db.name }}</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ tableString }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a *ngFor="let table of selectedDb?.tables" (click)="setTable(table)" class="dropdown-item" href="#">{{ table.name }}</a>
+            </div>
+          </div>
+          <ul class="list-unstyled components">
             <p>Table name: {{ data?.file_name }}</p>
             <li *ngFor="let col of data?.columns">
-                <a href="#">{{ col.name }}</a>
+              <a href="#">{{ col.name }}</a>
             </li>
-        </ul>
-    </nav>
-
-</div>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="col-9 bd-content">
       <div class="container">

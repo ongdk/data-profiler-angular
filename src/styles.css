@@ -46,6 +46,7 @@ text{
 .dropdown{
   position: relative;
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 .container{
