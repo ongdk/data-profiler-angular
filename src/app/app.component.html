@@ -1,18 +1,31 @@
 <nav class="row">
-  <div class="col-md-12">
+  <div class="col-12">
     <div class="header">
       header
     </div>
   </div>
 </nav>
 <div class="container-fluid">
-  <div class="row flex-xl-nowrap">
+  <div class="row">
     <div class="col-3 bd-sidebar">
-        header
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <h6>Table name: {{ data?.file_name }}</h6>
+      <li *ngFor="let col of data?.columns">
+        {{ col.name }}
+      </li>
     </div>
-    <div class="col-12 bd-content">
-    	<div>main</div>
+    <div class="col-9 bd-content">
+      <div class="container">
+        <app-data [data]="data"></app-data>
+      </div>
     </div>
   </div>
-  <!-- <app-data></app-data> -->
-</div>

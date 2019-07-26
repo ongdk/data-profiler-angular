@@ -1,8 +1,4 @@
 <div style="text-align:left;width:500px;">
-  <h2>Table name: {{ data?.file_name }}</h2>
-  <li *ngFor="let col of data?.columns">
-    {{ col.name }}
-  </li>
   <div *ngFor="let col of data?.columns">
     <h2>Column: {{ col.name }}</h2>
     <p> Type : {{ col.type }} </p>

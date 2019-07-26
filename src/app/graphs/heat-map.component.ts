@@ -7,7 +7,6 @@ import { Column } from '../column';
   selector: 'ngx-heat-map',
   template:  `
   <div *ngFor = "let heatmap of heatmaps">
-    <div>
       <ngx-charts-heat-map
         [view]="view"
         [results]="heatmap.entries"
@@ -20,12 +19,10 @@ import { Column } from '../column';
         [xAxisLabel]="column.name"
         [yAxisLabel]="heatmap.against"
         [animations]="animations"
-        [scheme] ="colorScheme"
+        [scheme] ="scheme"
         [legendPosition]="right"
         (select)="onSelect($event)">
       </ngx-charts-heat-map>
-    </div>
-    <!--div>
       <ngx-charts-bar-vertical-2d
         [view]="view" 
         [results]="heatmap.entries"
@@ -37,13 +34,11 @@ import { Column } from '../column';
         [showYAxisLabel]="showYAxisLabel" 
         [xAxisLabel]="xAxisLabel" 
         [yAxisLabel]="yAxisLabel"
-        [scheme]="colorScheme"
         [roundDomains]="roundDomains"
         [noBarWhenZero]="noBarWhenZero"
         [legendPosition]="right"
         (select)="onSelect($event)">
       </ngx-charts-bar-vertical-2d>
-    </div-->
   </div>
   `
 })

@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpErrorResponse } from '@angular/common/http';
-import { DataService } from '../data.service';
+import { Component, OnInit, Input} from '@angular/core';
 import { Data } from '../data';
 
 @Component({
@@ -9,25 +6,12 @@ import { Data } from '../data';
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.css']
 })
-export class DataComponent implements OnInit {
+export class DataComponent implements OnInit{
+  @Input() data: Data;
 
-  constructor(private dataService: DataService) { }
-
-  data: Data;
-  title = 'Title';
-
-  ngOnInit() {
-    this.getData();
+  constructor() {
   }
 
-  getData(): void{
-    this.dataService.getData().subscribe(
-    data => {
-      this.data = data as Data;
-    },
-    (err: HttpErrorResponse) => {
-      console.log(err.message);
-     }
-    );
-  }
+  ngOnInit() { }
+
 }

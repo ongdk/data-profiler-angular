@@ -2,44 +2,52 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
 body {
-  /*font-family: Lato;
-  color: white;
-  background-color: #353d47;
-  margin:20px*/
   /*width: 100%;*/
   /*margin: 0;
   padding: 0;*/
 }
 
-
 .header {
-	background: blue;
+  overflow: hidden;
+  position: fixed;
+	background-color: #353d47;
+  top: 0px;
+  color: white;
 	height: 40px;
-	padding: 20px;
+  width: 100%;
+	padding: 10px;
+  z-index: 2;
 }
 
 text{
-	fill: white;
+	fill: black;
 }
 
 .bd-sidebar {
-    position: sticky;
-    display:block;
-    top: 100px;
-    height: calc(100vh - 60px );
-    background: red;
+    position:fixed;
+    top: 40px;
+    padding-top: 1em;
+    height: calc(100vh - 40px);
+    border-right: 1px solid black;
 }
 
 .bd-content {
-    background: yellow;
+  top: 40px;
+  left: 25%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem; 
+  padding-right: 2rem;
+  height: 200vh;
 }
 
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+}
+
+.dropdown{
+  position: relative;
+}
+
+.container{
+  border: 1px solid black;
 }
