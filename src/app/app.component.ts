@@ -19,8 +19,9 @@ export class AppComponent implements OnInit {
 
   dbString: string = 'Select a Database';
   tableString: string = 'Select a Table';
+
   ngOnInit() {
-    this.getData();
+    //this.getData();
     this.getDbTableNames();
     //
   }
@@ -59,6 +60,12 @@ export class AppComponent implements OnInit {
   setTable(table: Table){
     console.log(table);
     this.tableString = table.name;
-    alert(this.selectedDb.name+"  "+ table.name);
+    this.getTable(this.selectedDb.name, table.name);
+    this.getData();
+  }
+
+  getTable(dbName: string, tableName: string){
+    //API call. Put corresponding table at asset/data.JSON
+    alert("fetching Database: "+dbName+" , Table: "+ tableName);
   }
 }

@@ -4,7 +4,6 @@
     <p> Type : {{ col.type }} </p>
     <ngx-number-card [column]=col></ngx-number-card>
     <div *ngIf="!(col.type==='categorical')">
-      <!-- (insert distinct code visualisation) -->
     </div>
     <div *ngIf="col.type==='categorical'">
       <ngx-bar-chart [column]=col></ngx-bar-chart>

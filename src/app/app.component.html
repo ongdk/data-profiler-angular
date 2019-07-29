@@ -30,18 +30,25 @@
               <a *ngFor="let table of selectedDb?.tables" (click)="setTable(table)" class="dropdown-item" href="#">{{ table.name }}</a>
             </div>
           </div>
-          <ul class="list-unstyled components">
-            <p>Table name: {{ data?.file_name }}</p>
-            <li *ngFor="let col of data?.columns">
-              <a href="#">{{ col.name }}</a>
-            </li>
-          </ul>
+          <div *ngIf = "data">
+            <ul class="list-unstyled components">
+              <p>Table name: {{ data?.file_name }}</p>
+              <li *ngFor="let col of data?.columns">
+                <a href="#">{{ col.name }}</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
     <div class="col-9 bd-content">
       <div class="container">
-        <app-data [data]="data"></app-data>
+        <div *ngIf = "data">
+          <app-data [data]="data"></app-data>
+        </div>
+        <div *ngIf = !data>
+          <h2>Please Select a Table to display</h2>
+        </div>
       </div>
     </div>
   </div>

@@ -29,7 +29,6 @@ text{
     position:fixed;
     top: 40px;
     height: calc(100vh - 40px);
-    border-right: 1px solid black;
     padding:0 !important;
 }
 
