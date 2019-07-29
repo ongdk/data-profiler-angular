@@ -33,7 +33,10 @@
           <div *ngIf = "data">
             <ul class="list-unstyled components">
               <p>Table name: {{ data?.file_name }}</p>
-              <li *ngFor="let col of data?.columns">
+              <li *ngFor="let col of data?.columns"
+              class = "columns"
+              [class.selectedCol]="col === selectedCol"
+              (click) = setCol(col)>
                 <a href="#">{{ col.name }}</a>
               </li>
             </ul>
@@ -44,7 +47,7 @@
     <div class="col-9 bd-content">
       <div class="container">
         <div *ngIf = "data">
-          <app-data [data]="data"></app-data>
+          <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
         </div>
         <div *ngIf = !data>
           <h2>Please Select a Table to display</h2>

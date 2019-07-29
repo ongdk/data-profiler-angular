@@ -1,13 +1,15 @@
 <div style="text-align:left;width:500px;">
   <div *ngFor="let col of data?.columns">
-    <h2>Column: {{ col.name }}</h2>
-    <p> Type : {{ col.type }} </p>
-    <ngx-number-card [column]=col></ngx-number-card>
-    <div *ngIf="!(col.type==='categorical')">
-    </div>
-    <div *ngIf="col.type==='categorical'">
-      <ngx-bar-chart [column]=col></ngx-bar-chart>
-      <ngx-heat-map [column]=col></ngx-heat-map>
+    <div *ngIf="col===selectedCol">
+      <h2>Column: {{ col.name }}</h2>
+      <p> Type : {{ col.type }} </p>
+      <ngx-number-card [column]=col></ngx-number-card>
+      <div *ngIf="!(col.type==='categorical')">
+      </div>
+      <div *ngIf="col.type==='categorical'">
+        <ngx-bar-chart [column]=col></ngx-bar-chart>
+        <ngx-heat-map [column]=col></ngx-heat-map>
+      </div>
     </div>
   </div>
 </div>

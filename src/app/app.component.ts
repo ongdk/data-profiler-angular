@@ -3,10 +3,13 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { DataService } from './data.service';
 import { Data } from './data';
 import { DbTableNames, Table } from './db_table_names';
+import { Column } from './column';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+
 })
 export class AppComponent implements OnInit {
 
@@ -16,6 +19,7 @@ export class AppComponent implements OnInit {
   data_table_names: DbTableNames;
   str: string;
   selectedDb: DbTableNames;
+  selectedCol: Column;
 
   dbString: string = 'Select a Database';
   tableString: string = 'Select a Table';
@@ -23,13 +27,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     //this.getData();
     this.getDbTableNames();
-    //
   }
 
   getData(): void{
     this.dataService.getData().subscribe(
     data => {
       this.data = data as Data;
+      this.setCol(this.data.columns[0]);   //display first column by default
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
@@ -49,7 +53,6 @@ export class AppComponent implements OnInit {
     );
   }
 
-
   setDb(db: DbTableNames){
     console.log(db);
     this.selectedDb = db;
@@ -67,5 +70,10 @@ export class AppComponent implements OnInit {
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
     alert("fetching Database: "+dbName+" , Table: "+ tableName);
+  }
+
+  setCol(column: Column){
+    this.selectedCol = column;
+    console.log("selected column: "+ column.name);
   }
 }

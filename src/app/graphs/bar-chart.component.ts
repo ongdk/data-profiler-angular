@@ -5,9 +5,8 @@ import { Column } from '../column';
 
 @Component({
   selector: 'ngx-bar-chart',
-  template: `<style>.dark .ngx-charts text {
-    fill: #A0AABE;
-}</style>
+  template: `
+  <div class="row"><div class="col-12">
   <ngx-charts-bar-vertical
     [view]="view" 
     [results]="results"
@@ -21,6 +20,7 @@ import { Column } from '../column';
     [yAxisLabel]="yAxisLabel" 
     (select)="onSelect($event)">
   </ngx-charts-bar-vertical>
+  </div></div>
 
 `})
 export class BarChartComponent implements OnInit {

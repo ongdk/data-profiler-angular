@@ -4,7 +4,9 @@ import { Column } from "../column";
 @Component({
   selector: 'ngx-number-card',
   template: `
+  <div class="row"><div class="col-12">
   <ngx-charts-number-card [view]="view" [results]="cards" (select)="onSelect($event)"></ngx-charts-number-card>
+  </div></div>
   `
 })
 export class NumberCardComponent implements OnInit {
