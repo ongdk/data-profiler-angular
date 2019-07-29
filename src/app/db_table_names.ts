@@ -3,6 +3,6 @@ export class Table{
 }
 
 export class DbTableNames {
-	database: string;
+	name: string;
 	tables: Table[]
 }
