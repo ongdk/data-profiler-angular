@@ -5,9 +5,9 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid">
+<div class="container" id="page-container">
   <div class="row">
-    <div class="col-2 bd-sidebar">
+    <div class="bd-sidebar">
       <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
@@ -37,18 +37,20 @@
           <div *ngIf="data">
             <ul class="list-unstyled components">
               <p>Table name: {{ data?.file_name }}</p>
-              <div id="columns">
+              <div id="columns-container">
+                <div>
                 <li class="column" [class.selectedCol]="selectedCol===null" (click)=dispStat()><a href="#">Table Statistics</a></li>
                 <li *ngFor="let col of data?.columns" class="column" [class.selectedCol]="col === selectedCol" (click)=setCol(col)>
                   <a href="#">{{ col.name }}</a>
                 </li>
               </div>
+            </div>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-    <div class="col-9 bd-content">
+    <div class="bd-content">
       <div class="container">
         <div *ngIf="data">
           <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
