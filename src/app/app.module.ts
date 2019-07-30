@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataComponent } from './data/data.component';
@@ -26,7 +28,8 @@ import { CrossTabComponent } from './graphs/cross-tab.component';
     AppRoutingModule,
     HttpClientModule,
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
