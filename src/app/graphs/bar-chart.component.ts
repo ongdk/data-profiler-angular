@@ -34,7 +34,6 @@ export class BarChartComponent implements OnInit {
 
   ngOnInit() {
   	this.appendCat(this.column);
-    console.log(this.results);
   }
 
   appendCat(column: Column){

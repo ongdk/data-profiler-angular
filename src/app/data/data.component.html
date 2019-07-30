@@ -1,14 +1,25 @@
 <div style="text-align:left;width:500px;">
-  <div *ngFor="let col of data?.columns">
-    <div *ngIf="col===selectedCol">
-      <h2>Column: {{ col.name }}</h2>
-      <p> Type : {{ col.type }} </p>
-      <ngx-number-card [column]=col></ngx-number-card>
-      <div *ngIf="!(col.type==='categorical')">
+  <div *ngIf="!selectedCol">
+    <h2>Table name: {{ data?.file_name }}</h2>
+    <p> General Statistics: </p>
+    <div class="row">
+      <div class="col-12">
+        <ngx-charts-number-card [view]="view" [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
       </div>
-      <div *ngIf="col.type==='categorical'">
-        <ngx-bar-chart [column]=col></ngx-bar-chart>
-        <ngx-cross-tabs [column]=col></ngx-cross-tabs>
+    </div>
+  </div>
+  <div *ngIf="selectedCol">
+    <div *ngFor="let col of data?.columns">
+      <div *ngIf="col===selectedCol">
+        <h2>Column: {{ col.name }}</h2>
+        <p> Type : {{ col.type }} </p>
+        <ngx-number-card [column]=col></ngx-number-card>
+        <div *ngIf="!(col.type==='categorical')">
+        </div>
+        <div *ngIf="col.type==='categorical'">
+          <ngx-bar-chart [column]=col></ngx-bar-chart>
+          <ngx-cross-tabs [column]=col></ngx-cross-tabs>
+        </div>
       </div>
     </div>
   </div>

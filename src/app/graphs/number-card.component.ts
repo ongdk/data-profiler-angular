@@ -12,9 +12,7 @@ import { Column } from "../column";
 export class NumberCardComponent implements OnInit {
   @Input() column: Column;
   
-  public cards = []; 
-
-  str: string;
+  cards = [];
 
   constructor() { }
 
@@ -27,7 +25,6 @@ export class NumberCardComponent implements OnInit {
   		{"name": "Missing Data","value":column.invalid_data},
   		{"name": "Valid Data (%)","value":100*(column.count-column.invalid_data)/column.count})
   	if (column.type == 'categorical'){
-  		this.str = 'I am categotical';
       this.cards.push({"name": "Number of Categories","value":column.stats.class_count.length});
 
   	}

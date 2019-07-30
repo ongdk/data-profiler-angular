@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   data_table_names: DbTableNames;
   str: string;
   selectedDb: DbTableNames;
-  selectedCol: Column;
+  selectedCol: Column = null;
 
   dbString: string = 'Select a Database';
   tableString: string = 'Select a Table';
@@ -33,7 +33,6 @@ export class AppComponent implements OnInit {
     this.dataService.getData().subscribe(
     data => {
       this.data = data as Data;
-      this.setCol(this.data.columns[4]);   //display first column by default
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
@@ -45,7 +44,6 @@ export class AppComponent implements OnInit {
     this.dataService.getDbTableNames().subscribe(
     data => {
       this.data_table_names = data as DbTableNames;
-      console.log(this.data_table_names);
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
@@ -54,14 +52,12 @@ export class AppComponent implements OnInit {
   }
 
   setDb(db: DbTableNames){
-    console.log(db);
     this.selectedDb = db;
     this.dbString = db.name;
     this.tableString= 'Select a Table';
   }
 
   setTable(table: Table){
-    console.log(table);
     this.tableString = table.name;
     this.getTable(this.selectedDb.name, table.name);
     this.getData();
@@ -74,6 +70,10 @@ export class AppComponent implements OnInit {
 
   setCol(column: Column){
     this.selectedCol = column;
-    console.log("selected column: "+ column.name);
+  }
+
+  dispStat(input){
+    console.log(this.selectedCol);
+    this.selectedCol = null;
   }
 }

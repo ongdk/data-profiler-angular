@@ -38,6 +38,7 @@
             <ul class="list-unstyled components">
               <p>Table name: {{ data?.file_name }}</p>
               <div id="columns">
+                <li class="column" [class.selectedCol]="selectedCol===null" (click)=dispStat()><a href="#">Table Statistics</a></li>
                 <li *ngFor="let col of data?.columns" class="column" [class.selectedCol]="col === selectedCol" (click)=setCol(col)>
                   <a href="#">{{ col.name }}</a>
                 </li>
