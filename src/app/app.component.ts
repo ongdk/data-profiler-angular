@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   tableString: string = 'Select a Table';
 
   ngOnInit() {
-    // this.getData();
+    //this.getData();
     this.getDbTableNames();
   }
 

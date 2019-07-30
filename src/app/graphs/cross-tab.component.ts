@@ -81,7 +81,4 @@ export class CrossTabComponent implements OnInit {
   schemeBar =   {
     domain: ["#3d8dbd","#72a4c9","#9dbbd4","#c4d3e0","#f3cfbc","#f5b48e","#f39960","#ed7d31"]
   };
-
-  // line, area
-  autoScale = true;
 }

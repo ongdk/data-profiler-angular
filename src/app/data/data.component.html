@@ -1,6 +1,7 @@
 <div style="text-align:left;width:500px;">
   <div *ngIf="!selectedCol">
     <h2>Table name: {{ data?.file_name }}</h2>
+    <h3>Table Type: {{ data?.table_type }}</h3>
     <p> General Statistics: </p>
     <div class="row">
       <div class="col-12">
@@ -9,7 +10,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <ngx-charts-pie-chart [view]="[400, 300]" [results]="pie" [legend]=true [scheme]="schemePie" (select)="onSelect($event)">
+        <ngx-charts-pie-chart [view]="[600, 300]" [results]="pie" [legend]=true [legendPosition]="'below'" [scheme]="schemePie" (select)="onSelect($event)">
         </ngx-charts-pie-chart>
       </div>
     </div>
