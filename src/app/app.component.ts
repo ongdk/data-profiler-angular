@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   tableString: string = 'Select a Table';
 
   ngOnInit() {
-    this.getData();
+    // this.getData();
     this.getDbTableNames();
   }
 
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
 
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
-    alert("fetching Database: "+dbName+" , Table: "+ tableName);
+    console.log("fetching Database: "+dbName+" , Table: "+ tableName);
   }
 
   setCol(column: Column){

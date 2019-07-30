@@ -7,6 +7,12 @@
         <ngx-charts-number-card [view]="view" [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+        <ngx-charts-pie-chart [view]="[400, 300]" [results]="pie" [legend]=true [scheme]="schemePie" (select)="onSelect($event)">
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
   </div>
   <div *ngIf="selectedCol">
     <div *ngFor="let col of data?.columns">
