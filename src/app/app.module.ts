@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
-import { HeatMapComponent } from './graphs/heat-map.component';
+import { CrossTabComponent } from './graphs/cross-tab.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { HeatMapComponent } from './graphs/heat-map.component';
     DataComponent,
     BarChartComponent,
     NumberCardComponent,
-    HeatMapComponent
+    CrossTabComponent
   ],
   imports: [
     BrowserModule,

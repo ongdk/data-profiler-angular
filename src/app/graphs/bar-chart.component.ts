@@ -17,7 +17,9 @@ import { Column } from '../column';
     [showXAxisLabel]="showXAxisLabel" 
     [showYAxisLabel]="showYAxisLabel" 
     [xAxisLabel]="xAxisLabel" 
-    [yAxisLabel]="yAxisLabel" 
+    [yAxisLabel]="yAxisLabel"
+    [noBarWhenZero]="noBarWhenZero"
+    [scheme]="scheme"
     (select)="onSelect($event)">
   </ngx-charts-bar-vertical>
   </div></div>
@@ -32,24 +34,30 @@ export class BarChartComponent implements OnInit {
 
   ngOnInit() {
   	this.appendCat(this.column);
+    console.log(this.results);
   }
 
   appendCat(column: Column){
     this.results = column.stats.class_count;
   }
 
-  view: any[] = [700, 400];
+  view: any[] = [800, 400];
 
   // options for the chart
   showXAxis = true;
   showYAxis = true;
   gradient = false;
-  showLegend = true;
+  showLegend = false;
   showXAxisLabel = true;
   xAxisLabel = 'Values';
   showYAxisLabel = true;
   yAxisLabel = 'Counts';
   timeline = true;
+  noBarWhenZero=true;
+
+  scheme =   {
+    domain: ["#3d8dbd"]
+  };
 
   // line, area
   autoScale = true;

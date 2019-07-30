@@ -5,7 +5,7 @@ import { Column } from "../column";
   selector: 'ngx-number-card',
   template: `
   <div class="row"><div class="col-12">
-  <ngx-charts-number-card [view]="view" [results]="cards" (select)="onSelect($event)"></ngx-charts-number-card>
+  <ngx-charts-number-card [view]="view" [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
   </div></div>
   `
 })
@@ -36,6 +36,8 @@ export class NumberCardComponent implements OnInit {
   	}
   }
 
-  view: any[] = [700, 150];
-
+  view: any[] = [900, 150];
+  scheme = {
+    domain: ["#3d8dbd"]
+  }
 }

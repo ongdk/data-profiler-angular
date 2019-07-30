@@ -7,38 +7,41 @@
 </nav>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3 bd-sidebar">
+    <div class="col-2 bd-sidebar">
       <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
           <div class="sidebar-header">
             <h3>Data Profiler</h3>
           </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ dbString }}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a *ngFor="let db of data_table_names" (click)="setDb(db)" class="dropdown-item" href="#">{{ db.name }}</a>
+          <div class="row">
+            <div class="col-12">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ dbString }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a *ngFor="let db of data_table_names" (click)="setDb(db)" class="dropdown-item" href="#">{{ db.name }}</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ tableString }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a *ngFor="let table of selectedDb?.tables" (click)="setTable(table)" class="dropdown-item" href="#">{{ table.name }}</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ tableString }}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a *ngFor="let table of selectedDb?.tables" (click)="setTable(table)" class="dropdown-item" href="#">{{ table.name }}</a>
-            </div>
-          </div>
-          <div *ngIf = "data">
+          <div *ngIf="data">
             <ul class="list-unstyled components">
               <p>Table name: {{ data?.file_name }}</p>
-              <li *ngFor="let col of data?.columns"
-              class = "columns"
-              [class.selectedCol]="col === selectedCol"
-              (click) = setCol(col)>
-                <a href="#">{{ col.name }}</a>
-              </li>
+              <div id="columns">
+                <li *ngFor="let col of data?.columns" class="column" [class.selectedCol]="col === selectedCol" (click)=setCol(col)>
+                  <a href="#">{{ col.name }}</a>
+                </li>
+              </div>
             </ul>
           </div>
         </nav>
@@ -46,11 +49,11 @@
     </div>
     <div class="col-9 bd-content">
       <div class="container">
-        <div *ngIf = "data">
+        <div *ngIf="data">
           <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
         </div>
-        <div *ngIf = !data>
-          <h2>Please Select a Table to display</h2>
+        <div *ngIf=!data>
+          <h2>Please select a table to be displayed.</h2>
         </div>
       </div>
     </div>

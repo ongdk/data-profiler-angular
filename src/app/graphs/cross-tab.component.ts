@@ -4,13 +4,13 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { Column } from '../column';
 
 @Component({
-  selector: 'ngx-heat-map',
+  selector: 'ngx-cross-tabs',
   template:  `
-  <div *ngFor = "let heatmap of heatmaps">
-<div class="row"><div class="col-12">
+  <div *ngFor = "let cross_tab of cross_tabs">
+    <div class="row"><div class="col-12">
       <ngx-charts-heat-map
-        [view]="view"
-        [results]="heatmap.entries"
+        [view]="[730, 400]"
+        [results]="cross_tab.entries"
         [legend]="showLegend"
         [gradient]="gradient"
         [xAxis]="showXAxis"
@@ -18,36 +18,37 @@ import { Column } from '../column';
         [showXAxisLabel]="showXAxisLabel"
         [showYAxisLabel]="showYAxisLabel"
         [xAxisLabel]="column.name"
-        [yAxisLabel]="heatmap.against"
+        [yAxisLabel]="cross_tab.against"
         [animations]="animations"
         [scheme] ="scheme"
         (select)="onSelect($event)">
       </ngx-charts-heat-map>
-</div></div>
-<div class="row"><div class="col-12">
+    </div></div>
+    <div class="row"><div class="col-12">
       <ngx-charts-bar-vertical-2d
-        [view]="view" 
-        [results]="heatmap.entries"
+        [view]="[800, 400]" 
+        [results]="cross_tab.entries"
         [gradient]="gradient" 
         [xAxis]="showXAxis" 
         [yAxis]="showYAxis" 
-        [legend]="showLegend" 
+        [legend]="showLegend"
         [showXAxisLabel]="showXAxisLabel" 
         [showYAxisLabel]="showYAxisLabel" 
         [xAxisLabel]="xAxisLabel" 
         [yAxisLabel]="yAxisLabel"
+        [scheme] ="schemeBar"
         [roundDomains]="roundDomains"
         [noBarWhenZero]="noBarWhenZero"
         (select)="onSelect($event)">
       </ngx-charts-bar-vertical-2d>
-</div></div>
+    </div></div>
   </div>
   `
 })
-export class HeatMapComponent implements OnInit {
+export class CrossTabComponent implements OnInit {
   @Input() column: Column;
 
-  public heatmaps: any;
+  public cross_tabs: any;
  str:string;
   constructor() { }
 
@@ -56,10 +57,8 @@ export class HeatMapComponent implements OnInit {
   }
 
   append(column: Column){
-  	this.heatmaps = this.column.stats.cross_tabs;
+  	this.cross_tabs = this.column.stats.cross_tabs;
   }
-
-    view: any[] = [700, 400];
 
 	// options for the chart
 	showXAxis = true;
@@ -69,14 +68,19 @@ export class HeatMapComponent implements OnInit {
 	showXAxisLabel = true;
 	showYAxisLabel = true;
 	animations = true;
-	scheme ='aqua';
+	scheme ={
+  domain: ["#A0DBF2","#0D79A3"]
+};
 
     // options for the chart
   xAxisLabel = 'Values';
   yAxisLabel = 'Counts';
   timeline = true;
   roundDomains=true;
-  noBarWhenZero=true
+  noBarWhenZero=true;
+  schemeBar =   {
+    domain: ["#3d8dbd","#72a4c9","#9dbbd4","#c4d3e0","#f3cfbc","#f5b48e","#f39960","#ed7d31"]
+  };
 
   // line, area
   autoScale = true;

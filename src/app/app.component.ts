@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   tableString: string = 'Select a Table';
 
   ngOnInit() {
-    //this.getData();
+    this.getData();
     this.getDbTableNames();
   }
 
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     this.dataService.getData().subscribe(
     data => {
       this.data = data as Data;
-      this.setCol(this.data.columns[0]);   //display first column by default
+      this.setCol(this.data.columns[4]);   //display first column by default
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
