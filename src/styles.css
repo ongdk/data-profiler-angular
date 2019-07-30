@@ -108,7 +108,7 @@ a, a:hover, a:focus {
 
 .components li.selectedCol {
     color: #3d8dbd;
-    background: #fff;
+    background: #F0F0F0;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
