@@ -35,6 +35,7 @@ text{
 
 .col-12{
   padding:0;
+  margin:0;
 }
 
 .bd-sidebar {
@@ -43,7 +44,7 @@ text{
     border: 0px solid blue;
     padding:0;
     min-width: 218px;
-    width:15vw;
+    width: 218px;
 
     display: inline-flex;
     flex-direction: column;
@@ -51,7 +52,7 @@ text{
 
 .bd-content {
   padding:0;
-  padding-left: 2em;
+  padding-left: 4em;
   margin-left: 218px;
   border: 0px solid green;
   max-width: 100vw !important;
@@ -62,6 +63,7 @@ text{
 .bd-content .row {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  width:100%;
 }
 
 .dropdown{
@@ -76,9 +78,9 @@ text{
   padding:0;
   margin:0;
   padding-top: 2em;
+  max-width: 100vw !important;
+  width:100%;
 }
-
-
 
 body {
     font-family: 'Poppins', sans-serif;

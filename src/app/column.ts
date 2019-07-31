@@ -1,6 +1,16 @@
+export class DataValue{
+	"name":string;
+	"value":number;
+}
+
+export class Entry{
+	"name":string;
+	"series":DataValue[];
+}
+
 export class CrossTab{
 	"against":string;
-	"entries": [];
+	"entries": Entry[];
 }
 
 export class NumericStats{

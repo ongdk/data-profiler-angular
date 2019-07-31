@@ -52,12 +52,16 @@
     </div>
     <div class="bd-content">
       <div class="container">
-        <div *ngIf="data">
+        <ng-container *ngIf="data">
+          <div>
           <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
         </div>
-        <div *ngIf=!data>
+      </ng-container>
+        <ng-container *ngIf=!data>
+          <div>
           <h2>Please select a table to be displayed.</h2>
         </div>
+      </ng-container>
       </div>
     </div>
   </div>

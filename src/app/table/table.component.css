@@ -1,0 +1,36 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+.ngx-datatable{
+	margin: 10px;
+	padding:0.5em;
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 0.5em 3em;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#name{
+	background-color: blue;
+}
+
+#against{
+	background-color: yellow;
+}
+
+#rows{
+	background-color: green;
+}
+
+#columns{
+	background-color: red;
+}

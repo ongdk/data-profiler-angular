@@ -7,6 +7,7 @@ import { Column } from '../column';
   selector: 'ngx-bar-chart',
   template: `
   <div class="row"><div class="col-12">
+  <pinch-zoom [zoom-button]=true [double-tap]=true style="align-items: left">
   <ngx-charts-bar-vertical
     [view]="view" 
     [results]="results"
@@ -22,6 +23,7 @@ import { Column } from '../column';
     [scheme]="scheme"
     (select)="onSelect($event)">
   </ngx-charts-bar-vertical>
+  </pinch-zoom>
   </div></div>
 
 `})

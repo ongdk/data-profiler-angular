@@ -10,10 +10,13 @@ import { DataComponent } from './data/data.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
 import { CrossTabComponent } from './graphs/cross-tab.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { CrossTabComponent } from './graphs/cross-tab.component';
     DataComponent,
     BarChartComponent,
     NumberCardComponent,
-    CrossTabComponent
+    CrossTabComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { CrossTabComponent } from './graphs/cross-tab.component';
     HttpClientModule,
     NgxChartsModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PinchZoomModule,
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
