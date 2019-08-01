@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     data => {
       this.data = data as Data;
       this.dispStat();
-      this.selectedCol = this.data.columns[1];
+      this.selectedCol = this.data.columns[2];
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);

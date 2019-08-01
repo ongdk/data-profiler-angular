@@ -9,9 +9,11 @@ import { Column, CrossTab } from '../column';
 export class TableComponent implements OnInit {
   @Input() cross_tab:CrossTab;
   @Input() name:string;
-  values: [][];
-  row_names:string[];
-  col_names:string[];
+  values: number[][];
+  max:number;
+  min:number;
+
+  checked=false;
 
   constructor() { }
 
@@ -20,20 +22,32 @@ export class TableComponent implements OnInit {
   }
 
   append(cross_tab:CrossTab){
-  	var values=[];
-  	var col=[];
+  	var values: number[][]=[];
+  	var col:number[] =[];
+    var value: number;
+    var max: number;
+    var min: number;
 	for (var i in cross_tab.entries) {
 	    for (var j in cross_tab.entries[i].series) {
-	    	col.push(cross_tab.entries[i].series[j].value);
+        value = cross_tab.entries[i].series[j].value;
+	    	col.push(value);
+        if (max==null || value>max){
+          max = value;
+        }
+        if (min==null || value<min){
+          min = value;
+        }
 	    }
 	    values.push(col);
 	    col=[];
 	}
 	this.values = values;
-	console.log(this.values);
+  this.max = max;
+  this.min = min;
   }
 
-  counter(i: number) {
-    return new Array(i);
-}
+  toggle(){
+    this.checked= !this.checked;
+    console.log(this.checked);
+  }
 }

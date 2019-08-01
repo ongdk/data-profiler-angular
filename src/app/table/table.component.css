@@ -5,11 +5,11 @@
 table {
   overflow: hidden;
   border-radius: 5px;
-  border: 0px !important;
   width: 100%;
   height: calc(100% - 30px);  
   border-style: hidden;
-  box-shadow: 0 0 0 1px #666; /* this draws the table border  */ 
+  box-shadow: 0 0 0 1px #666;
+
 }
 
 th , td  {
@@ -40,7 +40,7 @@ table td:hover::after{
 
 table td:hover::after,
 table tr:hover {
-  background-color: #c4d3e0;
+  background-color: #b0d3f1;
 }
 
 
@@ -76,4 +76,16 @@ table tr:hover {
 
 .noHover{
     pointer-events: none;
+}
+
+ui-switch{
+  padding: 10px;
+}
+
+.max{
+  background-color: #c3e7ff;
+}
+
+.min{
+  background-color: #c3e7ff;
 }

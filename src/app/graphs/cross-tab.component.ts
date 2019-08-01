@@ -1,17 +1,15 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 
-import { Column } from '../column';
+import { Column,CrossTab } from '../column';
 
 @Component({
-  selector: 'ngx-cross-tabs',
+  selector: 'cross-tab',
   template:  `
-  <ng-container *ngFor = "let cross_tab of cross_tabs">
-    <div>
       <div class="row"><div class="col-12">
-        <cross-tab-table [cross_tab]=cross_tab [name]=column.name></cross-tab-table>
+        <cross-tab-table [cross_tab]=cross_tab [name]=name></cross-tab-table>
       </div></div>
-      <div class="row"><div class="col-12">
+      <!--div class="row"><div class="col-12">
         <pinch-zoom [zoom-button]=true [double-tap]=true style="">
           <ngx-charts-heat-map
             [view]="[730, 400]"
@@ -22,7 +20,7 @@ import { Column } from '../column';
             [yAxis]="showYAxis"
             [showXAxisLabel]="showXAxisLabel"
             [showYAxisLabel]="showYAxisLabel"
-            [xAxisLabel]="column.name"
+            [xAxisLabel]="name"
             [yAxisLabel]="cross_tab.against"
             [animations]="animations"
             [scheme] ="scheme"
@@ -49,23 +47,20 @@ import { Column } from '../column';
             (select)="onSelect($event)">
           </ngx-charts-bar-vertical-2d>
         </pinch-zoom>
-      </div></div>
-    </div>
-  </ng-container>
+      </div></div-->
   `
 })
 export class CrossTabComponent implements OnInit {
-  @Input() column: Column;
+  @Input() cross_tab: CrossTab;
+  @Input() name:Column;
 
   public cross_tabs: any;
   constructor() { }
 
   ngOnInit() {
-  	this.append(this.column);
   }
 
-  append(column: Column){
-  	this.cross_tabs = this.column.stats.cross_tabs;
+  append(){
   }
 
 	// options for the chart

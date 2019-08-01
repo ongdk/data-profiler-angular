@@ -28,7 +28,7 @@
             <ng-container *ngIf="col.type==='categorical'">
               <div>
                 <ngx-bar-chart [column]=col></ngx-bar-chart>
-                <ngx-cross-tabs [column]=col></ngx-cross-tabs>
+                <cross-tabs [cross_tabs]=col.stats.cross_tabs [name]=col.name></cross-tabs>
               </div>
             </ng-container>
           </div>

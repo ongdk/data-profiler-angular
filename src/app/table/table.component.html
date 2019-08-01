@@ -1,17 +1,27 @@
-<table>
-  <tr>
-    <td rowspan="2" colspan="2" class="noHover"> Cross Tab</td>
-    <td colspan="100%" align="center" id="name" class="noHover">{{ name }}</td>
-  </tr>
-  <tr>
-    <th *ngFor="let row of cross_tab?.entries" id="rows" class="noHover">{{ row.name }}</th>
-  </tr>
-  <tr>
-  	<td rowspan="100%" class="noHover" id="against" align="center">{{ cross_tab.against }}</td>
-  </tr>
-  <tr *ngFor="let col of cross_tab?.entries[0]?.series;let i = index;">
-    <th id="columns" class="noHover">{{ col.name }}</th>
-    <td *ngFor="let row of cross_tab?.entries;let j = index" id="values">{{ values[j][i] }}
-    </td>
-  </tr>
-</table>
+<div class="row">
+  <table>
+    <tr>
+      <td rowspan="2" colspan="2" class="noHover"> Cross Tab</td>
+      <td colspan="100%" align="center" id="name" class="noHover">{{ name }}</td>
+    </tr>
+    <tr>
+      <th *ngFor="let row of cross_tab?.entries" id="rows" class="noHover">{{ row.name }}</th>
+    </tr>
+    <tr>
+      <td rowspan="100%" class="noHover" id="against" align="center">{{ cross_tab.against }}</td>
+    </tr>
+    <tr *ngFor="let col of cross_tab?.entries[0]?.series;let i = index;">
+      <th id="columns" class="noHover">{{ col.name }}</th>
+      <td *ngFor="let row of cross_tab?.entries;let j = index" id="values"  [class.max]="values[j][i]==max" [class.min]="values[j][i]==min">
+        <div *ngIf="checked==true">{{ values[j][i] }}</div>
+        <div *ngIf="checked==false">
+          <div *ngIf="values[j][i]!==0">{{ values[j][i] }}</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="row" style="vertical-align: middle;">
+  <p style="margin-top: 10px;">Toggle Zeros</p>
+  <ui-switch [checked]="checked" switchColor="#fcfcfc" color="#3d8dbd" (change)="toggle()"></ui-switch>
+</div>

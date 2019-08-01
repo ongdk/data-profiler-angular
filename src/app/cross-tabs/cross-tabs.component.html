@@ -1,0 +1,8 @@
+<h2>Cross tabs</h2>
+<div>
+<mat-tab-group  mat-align-tabs="center" animationDuration="150ms">
+  <mat-tab *ngFor = "let cross_tab of cross_tabs" label={{cross_tab.against}}>
+  	<cross-tab [cross_tab]=cross_tab [name]=name></cross-tab>
+  </mat-tab>
+</mat-tab-group>
+</div>
