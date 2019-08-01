@@ -6,6 +6,7 @@ import { Column } from '../column';
 @Component({
   selector: 'ngx-bar-chart',
   template: `
+  <h2>Counts of categories</h2>
   <div class="row"><div class="col-12">
   <pinch-zoom [zoom-button]=true [double-tap]=true style="align-items: left">
   <ngx-charts-bar-vertical
@@ -50,7 +51,7 @@ export class BarChartComponent implements OnInit {
   gradient = false;
   showLegend = false;
   showXAxisLabel = true;
-  xAxisLabel = 'Values';
+  xAxisLabel = 'Categories of current column';
   showYAxisLabel = true;
   yAxisLabel = 'Counts';
   timeline = true;

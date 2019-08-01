@@ -1,3 +1,43 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/*.mat-tab-group {
+}
+
+.mat-tab-content {
+  padding: 16px;
+  align-content: center;
+}
+
+.mat-tab-label-active{
+  opacity: 1 !important;
+}
+
+.custom-tabs .mat-tab-body-wrapper {
+  background: #eee;
+}
+.custom-tabs .mat-tab-body {
+  padding: 20px;
+  border: 1px solid red;
+}
+*/
+[_nghost-c5] {
+    display: inline-block !important;
+    width: 100%;
+}
+.mat-tab-link-active,
+.mat-tab-label-active {
+    background-color: #5EADB0;
+    color: #D5FEFF;
+    border: 1px solid red;
+    font-weight: bold;
+}
+
+.mat-tab-link,
 .mat-tab-label {
-    background-color: red;
+}
+
+.tabContentContainer {
+    border: 1px solid #aaaaaa;
+    background: #ffffff 50% 50% repeat-x;
+    border: 1px solid red;
 }

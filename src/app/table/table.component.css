@@ -2,6 +2,9 @@
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
+.row{
+  overflow: auto;
+}
 table {
   overflow: hidden;
   border-radius: 5px;
@@ -9,6 +12,7 @@ table {
   height: calc(100% - 30px);  
   border-style: hidden;
   box-shadow: 0 0 0 1px #666;
+
 
 }
 
@@ -59,13 +63,11 @@ table tr:hover {
 }
 
 #rows{
-	/*background-color: green;*/
 	 font-weight: bold;
    border: 1px  solid grey;
 }
 
 #columns{
-	/*background-color: red;*/
 	 font-weight: bold;
    border: 1px  solid grey;
 }

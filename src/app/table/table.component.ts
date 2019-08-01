@@ -34,7 +34,7 @@ export class TableComponent implements OnInit {
         if (max==null || value>max){
           max = value;
         }
-        if (min==null || value<min){
+        if ((min==null || value<min)&&value!=0){
           min = value;
         }
 	    }
