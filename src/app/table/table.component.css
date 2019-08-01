@@ -20,17 +20,17 @@ table tr:nth-child(even) {
 }
 
 #name{
-	background-color: blue;
+	/*background-color: blue;*/
 }
 
 #against{
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 
 #rows{
-	background-color: green;
+	/*background-color: green;*/
 }
 
 #columns{
-	background-color: red;
+	/*background-color: red;*/
 }
