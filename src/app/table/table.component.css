@@ -2,35 +2,78 @@
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
-.ngx-datatable{
-	margin: 10px;
-	padding:0.5em;
+table {
+  overflow: hidden;
+  border-radius: 5px;
+  border: 0px !important;
+  width: 100%;
+  height: calc(100% - 30px);  
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #666; /* this draws the table border  */ 
 }
 
-table, th , td  {
-  border: 1px solid grey;
+th , td  {
+  border: 0px solid grey;
   border-collapse: collapse;
-  padding: 0.5em 3em;
+  padding: 0.5em 1em;
+  position: relative;
 }
-table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+
+td, th {
+  position: relative;
+  outline: 0;
 }
-table tr:nth-child(even) {
-  background-color: #ffffff;
+
+
+
+table td:hover::after{ 
+  content: '';  
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
 }
+
+
+
+table td:hover::after,
+table tr:hover {
+  background-color: #c4d3e0;
+}
+
 
 #name{
-	/*background-color: blue;*/
+	background-color: #72a4c9 !important;
+  border-left: 1px  solid grey;
+  color: white;
+  font-style: italic;
 }
 
 #against{
-	/*background-color: yellow;*/
+	background-color: #72a4c9 !important;
+  border-top: 1px  solid grey;
+  color: white;
+  font-style: italic;
 }
 
 #rows{
 	/*background-color: green;*/
+	 font-weight: bold;
+   border: 1px  solid grey;
 }
 
 #columns{
 	/*background-color: red;*/
+	 font-weight: bold;
+   border: 1px  solid grey;
+}
+
+#values{
+	border: 1px solid #ddd;
+}
+
+.noHover{
+    pointer-events: none;
 }

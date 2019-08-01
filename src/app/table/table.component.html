@@ -1,17 +1,17 @@
 <table>
   <tr>
-    <td rowspan="2" colspan="2">&nbsp;</td>
-    <td colspan="100%" align="center" id="name">{{ name }}</td>
+    <td rowspan="2" colspan="2" class="noHover"> Cross Tab</td>
+    <td colspan="100%" align="center" id="name" class="noHover">{{ name }}</td>
   </tr>
   <tr>
-    <td *ngFor="let row of cross_tab?.entries" id="rows">{{ row.name }}</td>
+    <th *ngFor="let row of cross_tab?.entries" id="rows" class="noHover">{{ row.name }}</th>
   </tr>
   <tr>
-  	<td rowspan="100%" id="against">{{ cross_tab.against }}</td>
+  	<td rowspan="100%" class="noHover" id="against" align="center">{{ cross_tab.against }}</td>
   </tr>
   <tr *ngFor="let col of cross_tab?.entries[0]?.series;let i = index;">
-    <td id="columns">{{ col.name }}</td>
-    <td *ngFor="let row of cross_tab?.entries;let j = index">{{ values[j][i] }}
+    <th id="columns" class="noHover">{{ col.name }}</th>
+    <td *ngFor="let row of cross_tab?.entries;let j = index" id="values">{{ values[j][i] }}
     </td>
   </tr>
 </table>
