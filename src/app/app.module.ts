@@ -11,15 +11,18 @@ import { DataComponent } from './data/data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PinchZoomModule } from 'ngx-pinch-zoom';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+
 
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
 import { CrossTabComponent } from './graphs/cross-tab.component';
 import { TableComponent } from './table/table.component';
 import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
+import { BoxPlotComponent } from './box-plot/box-plot.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
     NumberCardComponent,
     CrossTabComponent,
     TableComponent,
-    CrossTabsComponent
+    CrossTabsComponent,
+    BoxPlotComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +43,9 @@ import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     PinchZoomModule,
-    NgxDatatableModule,
     UiSwitchModule,
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

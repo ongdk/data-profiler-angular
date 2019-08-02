@@ -25,6 +25,9 @@
             <h2>Column: {{ col.name }}</h2>
             <p> Type : {{ col.type }} </p>
             <ngx-number-card [column]=col></ngx-number-card>
+            <ng-container *ngIf="col.type==='nominal_numeric'">
+              <box-plot></box-plot>
+            </ng-container>
             <ng-container *ngIf="col.type==='categorical'">
               <div>
                 <ngx-bar-chart [column]=col></ngx-bar-chart>

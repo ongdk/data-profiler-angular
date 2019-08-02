@@ -22,6 +22,16 @@ export class NumericStats{
 	"correlations":[];
 }
 
+export class Percentile{
+    "lower":number;
+    "q1": number;
+    "median": number;
+    "q3": number;
+    "upper": number;
+    "mean": number;
+    "outliers": number[];
+}
+
 export class Stat{
 	"code_length":string;
 	"class_count": [];
@@ -30,6 +40,7 @@ export class Stat{
     "earliest":string;
     "latest":string;
     "percentiles":[];
+    "test_percentiles":Percentile;
     "numeric_stats":NumericStats;
 }
 
