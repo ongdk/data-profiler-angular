@@ -4,16 +4,21 @@ import { Column } from "../column";
 @Component({
   selector: 'ngx-number-card',
   template: `
-  <div class="row"><div class="col-12" style="height:30vh;">
+  <div class="row"><div class="col-12" [class.small]="size =='small'" [class.medium]="size =='medium'" [class.large]="size =='large'">
   <ngx-charts-number-card [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
   </div></div>
-  `
+
+  <div class="row"><div class="col-12" style="height:50vh">
+  <ngx-charts-number-card [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
+  </div></div>
+  `,
+  styles: [`.small{height:10vh;}`,`.medium{height:30vh;}`,`.large{height:50vh;}`]
 })
 export class NumberCardComponent implements OnInit {
   @Input() column: Column;
   
   cards = [];
-  view: number[];
+  size: string="large";
 
   constructor() { }
 
@@ -22,7 +27,6 @@ export class NumberCardComponent implements OnInit {
   }
 
   append(column: Column){
-    this.view = [900, 150];
   	this.cards.push({"name": "Distinct Count","value":column.count},
   		{"name": "Missing Data","value":column.invalid_data},
   		{"name": "Valid Data (%)","value":100*(column.count-column.invalid_data)/column.count})
@@ -37,7 +41,6 @@ export class NumberCardComponent implements OnInit {
         this.cards.push({"name": "Average Number of Entries","value":column.stats.average_num_ent},
           {"name": "Earliest","value":column.stats.earliest},
           {"name": "Latest","value":column.stats.latest});
-        this.view = [900, 300];
         break;
       case "string":
         //do sth
@@ -48,7 +51,6 @@ export class NumberCardComponent implements OnInit {
           {"name": "Standard Deviation","value":column.stats.numeric_stats.stddev},
           {"name": "Min. Value","value":column.stats.numeric_stats.min},
           {"name": "Max. Value","value":column.stats.numeric_stats.max});
-        this.view = [900, 300];
         break;
     }
   }
