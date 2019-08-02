@@ -1,4 +1,62 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.tabs{
+    width:100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.tabs .tab{
+    border-radius: 5px 5px 0px 0px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em 0.5em;
+}
+
+.tabs .tab:hover{
+    background-color: #E7E7E7;
+}
+
+.tabs .selected{
+    border-bottom: 3px solid #3d8dbd !important;
+    font-size: 16px;
+    color: #3d8dbd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
 
 /*.mat-tab-group {
 }
@@ -20,7 +78,7 @@
   border: 1px solid red;
 }
 */
-[_nghost-c5] {
+/*[_nghost-c5] {
     display: inline-block !important;
     width: 100%;
 }
@@ -40,4 +98,4 @@
     border: 1px solid #aaaaaa;
     background: #ffffff 50% 50% repeat-x;
     border: 1px solid red;
-}
+}*/

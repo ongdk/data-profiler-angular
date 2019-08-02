@@ -11,9 +11,18 @@ export class CrossTabsComponent implements OnInit {
   @Input() cross_tabs: CrossTab[];
   @Input() name:string;
 
+  selected: CrossTab;
+
   constructor() { }
 
   ngOnInit() {
+  	this.selected=this.cross_tabs[0];
+  	console.log(this.selected);
+  }
+
+  selectTab(cross_tab:CrossTab){
+  	this.selected=cross_tab;
+  	console.log(this.selected);
   }
 
 }
