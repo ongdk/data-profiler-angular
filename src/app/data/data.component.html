@@ -24,10 +24,10 @@
           <div>
             <h2>Column: {{ col.name }}</h2>
             <p> Type : {{ col.type }} </p>
-            <ngx-number-card [column]=col></ngx-number-card>
+<!--             <ngx-number-card [column]=col></ngx-number-card> -->
             <ng-container *ngIf="col.type==='categorical'">
               <div>
-                <ngx-bar-chart [column]=col></ngx-bar-chart>
+<!--                 <ngx-bar-chart [column]=col></ngx-bar-chart> -->
                 <cross-tabs [cross_tabs]=col.stats.cross_tabs [name]=col.name></cross-tabs>
               </div>
             </ng-container>
