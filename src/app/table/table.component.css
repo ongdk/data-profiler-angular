@@ -3,15 +3,17 @@
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
 .container{
+  overflow: auto;
+  border-radius: 5px;
+  border: 1px solid #666;
+  padding:0;
+  margin:0;
 }
 
 table {
   overflow: hidden;
-  border-radius: 5px;
   width: 100%;
-  height: calc(100% - 30px);  
-  border-style: hidden;
-  box-shadow: 0 0 0 1px #666;
+  height: calc(100% - 30px);
 }
 
 th , td  {
