@@ -44,7 +44,9 @@ import { Column } from '../column';
     </kendo-chart>
   </div></div>
 
-`})
+`, styles: [`.k-tooltip { width: auto ;}`]})
+
+
 export class BarChartComponent implements OnInit {
 	@Input() column: Column;
 
