@@ -6,7 +6,7 @@ import { Column } from '../column';
 @Component({
   selector: 'ngx-bar-chart',
   template: `
-  <div class="row"><div class="col-12" style="overflow:hidden;">
+  <div class="row"><div class="col-12">
     <kendo-chart renderAs="canvas" [pannable]="true" [zoomable]="true" [categoryAxis]="categoryAxis" [valueAxis]="valueAxis">
       <kendo-chart-area background="transparent" [margin]="0" [height]="300">
       </kendo-chart-area>
@@ -15,7 +15,7 @@ import { Column } from '../column';
         </kendo-chart-value-axis-item>
       </kendo-chart-value-axis>
       <kendo-chart-category-axis>
-        <kendo-chart-category-axis-item [categories]="name" [title]="{ text: 'Column Categories' }">
+        <kendo-chart-category-axis-item [categories]="name" [title]="{ text: 'Column Categories' }" [labels]="{ rotation: 'auto' }">
         </kendo-chart-category-axis-item>
       </kendo-chart-category-axis>
       <kendo-chart-series>
@@ -31,7 +31,8 @@ import { Column } from '../column';
   <p>Tip: SHIFT + Mouse Drag zoom into specific region.
   Use the mousewheel to zoom in and out</p>
 
-`, styles: [`.k-tooltip { width: auto ;}`]})
+`, styles: []
+})
 
 
 export class BarChartComponent implements OnInit {
