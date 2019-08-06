@@ -10,7 +10,18 @@
       </kendo-chart-value-axis>
       <kendo-chart-series>
         <kendo-chart-series-item type="verticalBoxPlot" [data]="data" lowerField="lower" q1Field="q1" medianField="median" q3Field="q3" upperField="upper" outliersField="outliers" meanField="mean">
-          <kendo-chart-series-item-tooltip></kendo-chart-series-item-tooltip>
+          <kendo-chart-series-item-tooltip>
+          	<ng-template>
+          		<table>
+	                <tr><td>Lower:</td><td>{{percentiles.lower}}</td></tr>
+	                <tr><td>Q1:</td><td>{{percentiles.q1}}</td></tr>
+	                <tr><td>Median:</td><td>{{percentiles.median}}</td></tr>
+	                <tr><td>Mean:</td><td>{{percentiles.mean}}</td></tr>
+	                <tr><td>Q3:</td><td>{{percentiles.q3}}</td></tr>
+	                <tr><td>Upper:</td><td>{{percentiles.upper}}</td></tr>
+            	</table>
+          	</ng-template>
+          </kendo-chart-series-item-tooltip>
         </kendo-chart-series-item>
       </kendo-chart-series>
     </kendo-chart>
