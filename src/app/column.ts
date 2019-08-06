@@ -22,7 +22,7 @@ export class NumericStats{
 	"correlations":[];
 }
 
-export class Percentile{
+export class Percentiles{
     "lower":number;
     "q1": number;
     "median": number;

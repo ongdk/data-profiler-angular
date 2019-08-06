@@ -1,11 +1,19 @@
-<p>Insert box plot here</p>
-      <kendo-chart>
-        <kendo-chart-series>
-          <kendo-chart-title text="Monthly Mean Temperatures (&deg;F)"></kendo-chart-title>
-          <kendo-chart-series-item type="boxPlot" [data]="data"
-                                   lowerField="lower" q1Field="q1" medianField="median"
-                                   q3Field="q3" upperField="upper" outliersField="outliers"
-                                   meanField="mean" categoryField="year">
-          </kendo-chart-series-item>
-        </kendo-chart-series>
-      </kendo-chart>
+<h2>Box plot</h2>
+<div class="row">
+  <div class="col-12">
+    <kendo-chart [pannable]="true" [zoomable]="{selection: {lock: 'y'}}">
+      <kendo-chart-area background="transparent" [margin]="0" [height]="300">
+      </kendo-chart-area>
+      <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [title]="{ text: 'Range of values of this column' }">
+        </kendo-chart-value-axis-item>
+      </kendo-chart-value-axis>
+      <kendo-chart-series>
+        <kendo-chart-series-item type="verticalBoxPlot" [data]="data" lowerField="lower" q1Field="q1" medianField="median" q3Field="q3" upperField="upper" outliersField="outliers" meanField="mean">
+          <kendo-chart-series-item-tooltip></kendo-chart-series-item-tooltip>
+        </kendo-chart-series-item>
+      </kendo-chart-series>
+    </kendo-chart>
+  </div>
+</div>
+<p>Tip: SHIFT + Mouse Drag zoom into specific region. Use the mousewheel to zoom in and out</p>

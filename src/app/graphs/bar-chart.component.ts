@@ -50,24 +50,4 @@ export class BarChartComponent implements OnInit {
     this.results = column.stats.class_count;
   }
 
-  view: any[] = [800, 400];
-
-  // options for the chart
-  showXAxis = true;
-  showYAxis = true;
-  gradient = false;
-  showLegend = false;
-  showXAxisLabel = true;
-  xAxisLabel = 'Categories of current column';
-  showYAxisLabel = true;
-  yAxisLabel = 'Counts';
-  timeline = true;
-  noBarWhenZero=true;
-
-  scheme =   {
-    domain: ["#3d8dbd"]
-  };
-
-  // line, area
-  autoScale = true;
 }
