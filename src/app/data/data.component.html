@@ -22,7 +22,7 @@
       <div>
         <ng-container *ngIf="col===selectedCol">
           <div>
-            <h2>Column: {{ col.name }}</h2>
+            <h1>Column: {{ col.name }}</h1>
             <p> Type : {{ col.type }} </p>
             <ngx-number-card [column]=col></ngx-number-card>
             <ng-container *ngIf="col.type==='nominal_numeric'">
@@ -30,6 +30,8 @@
             </ng-container>
             <ng-container *ngIf="col.type==='categorical'">
               <div>
+                <h2>Category counts</h2>
+                <p>Displaying counts of each categories in "{{col.name}}".</p>
                 <ngx-bar-chart [column]=col></ngx-bar-chart>
                 <cross-tabs [cross_tabs]=col.stats.cross_tabs [name]=col.name></cross-tabs>
               </div>

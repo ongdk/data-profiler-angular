@@ -6,43 +6,30 @@ import { Column } from '../column';
 @Component({
   selector: 'ngx-bar-chart',
   template: `
-  <!--h2>Counts of categories</h2>
-  <div class="row"><div class="col-12">
-  <pinch-zoom [zoom-button]=true [double-tap]=true style="align-items: left">
-  <ngx-charts-bar-vertical
-    [view]="view" 
-    [results]="results"
-    [gradient]="gradient" 
-    [xAxis]="showXAxis" 
-    [yAxis]="showYAxis" 
-    [legend]="showLegend" 
-    [showXAxisLabel]="showXAxisLabel" 
-    [showYAxisLabel]="showYAxisLabel" 
-    [xAxisLabel]="xAxisLabel" 
-    [yAxisLabel]="yAxisLabel"
-    [noBarWhenZero]="noBarWhenZero"
-    [scheme]="scheme"
-    (select)="onSelect($event)">
-  </ngx-charts-bar-vertical>
-  </pinch-zoom>
-  </div></div-->
-
   <div class="row"><div class="col-12" style="overflow:hidden;">
     <kendo-chart renderAs="canvas" [pannable]="true" [zoomable]="true" [categoryAxis]="categoryAxis" [valueAxis]="valueAxis">
-      <kendo-chart-title text="Column Categories">
-      </kendo-chart-title>
-      <kendo-chart-area background="white" [margin]="0" [height]="300">
+      <kendo-chart-area background="transparent" [margin]="0" [height]="300">
       </kendo-chart-area>
+      <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [title]="{ text: 'Counts' }">
+        </kendo-chart-value-axis-item>
+      </kendo-chart-value-axis>
+      <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item [categories]="name" [title]="{ text: 'Column Categories' }">
+        </kendo-chart-category-axis-item>
+      </kendo-chart-category-axis>
       <kendo-chart-series>
         <kendo-chart-series-item 
             type="column" [data]="results"
-            field="value" categoryField="name" [gap]="1" colorField="green">
-          <kendo-chart-series-item-tooltip background="green">
+            field="value" categoryField="name" [gap]="1" color="#3d8dbd">
+          <kendo-chart-series-item-tooltip background="#3d8dbd">
           </kendo-chart-series-item-tooltip>
         </kendo-chart-series-item>
       </kendo-chart-series>
     </kendo-chart>
   </div></div>
+  <p>Tip: SHIFT + Mouse Drag zoom into specific region.
+  Use the mousewheel to zoom in and out</p>
 
 `, styles: [`.k-tooltip { width: auto ;}`]})
 
