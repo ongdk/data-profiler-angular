@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
 
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
+    this.data=null;
     console.log("fetching Database: "+dbName+" , Table: "+ tableName);
     this.getDataTemp(tableName);
   }

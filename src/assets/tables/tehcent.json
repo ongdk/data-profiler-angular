@@ -1,0 +1,2768 @@
+{
+  "file_name": "tehcent",
+  "table_type": "transactional",
+  "columns": [
+  {
+    "name": "dis_cde_1",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "distinct_code",
+    "stats":
+    {
+      "code_length": 40
+    }
+  },
+  {
+    "name": "cat_1",
+    "count": 200,
+    "invalid_data": 10,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "a",
+        "value": 30
+      },
+      {
+        "name": "b",
+        "value": 19
+      },
+      {
+        "name": "c",
+        "value": 29
+      },
+      {
+        "name": "d",
+        "value": 32
+      },
+      {
+        "name": "e",
+        "value": 27
+      },
+      {
+        "name": "f",
+        "value": 28
+      },
+      {
+        "name": "g",
+        "value": 35
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_2",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 0
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 0
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 0
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "cat_2",
+    "count": 200,
+    "invalid_data": 10,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "a",
+        "value": 30
+      },
+      {
+        "name": "b",
+        "value": 19
+      },
+      {
+        "name": "c",
+        "value": 29
+      },
+      {
+        "name": "d",
+        "value": 32
+      },
+      {
+        "name": "e",
+        "value": 27
+      },
+      {
+        "name": "f",
+        "value": 28
+      },
+      {
+        "name": "g",
+        "value": 35
+      },
+      {
+        "name": "h",
+        "value": 30
+      },
+      {
+        "name": "i",
+        "value": 19
+      },
+      {
+        "name": "j",
+        "value": 29
+      },
+      {
+        "name": "k",
+        "value": 32
+      },
+      {
+        "name": "l",
+        "value": 27
+      },
+      {
+        "name": "m",
+        "value": 28
+      },
+      {
+        "name": "n",
+        "value": 35
+      },
+      {
+        "name": "aqw",
+        "value": 30
+      },
+      {
+        "name": "bsf",
+        "value": 19
+      },
+      {
+        "name": "cfs",
+        "value": 29
+      },
+      {
+        "name": "das",
+        "value": 32
+      },
+      {
+        "name": "edaf",
+        "value": 27
+      },
+      {
+        "name": "fasd",
+        "value": 28
+      },
+      {
+        "name": "gd",
+        "value": 35
+      },
+      {
+        "name": "hh",
+        "value": 30
+      },
+      {
+        "name": "ia",
+        "value": 19
+      },
+      {
+        "name": "jaf",
+        "value": 29
+      },
+      {
+        "name": "kf",
+        "value": 32
+      },
+      {
+        "name": "lf",
+        "value": 27
+      },
+      {
+        "name": "m",
+        "value": 28
+      },
+      {
+        "name": "n",
+        "value": 35
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_1",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      },
+      {
+        "against": "cat_3",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      },
+      {
+        "against": "cat_4",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      },
+      {
+        "against": "cat_5",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      },
+      {
+        "against": "cat_6",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      },
+      {
+        "against": "cat_7",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          },
+          {
+            "name": "l",
+            "value": 6
+          },
+          {
+            "name": "m",
+            "value": 7
+          },
+          {
+            "name": "n",
+            "value": 9
+          },
+          {
+            "name": "o",
+            "value": 8
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "dt_1",
+    "count": 150,
+    "invalid_data": 2,
+    "type": "datetime",
+    "stats":
+    {
+      "average_num_ent": 1.2398273498798723434,
+      "earliest": "2017-04-02",
+      "latest": "2019-04-23"
+    }
+  },
+  {
+    "name": "nom_num_1",
+    "count": 223,
+    "invalid_data": 4,
+    "type": "nominal_numeric",
+    "stats":
+    {
+      "percentiles":
+      {
+        "lower": 1.3,
+        "q1": 2.15,
+        "median": 2.95,
+        "q3": 3.725,
+        "upper": 4.7,
+        "mean": 2.9,
+        "outliers": [1, 9]
+      },
+      "numeric_stats":
+      {
+        "count": "321",
+        "mean": "2475.234",
+        "stddev": "20867.1231",
+        "min": "0.01",
+        "max": "285255.00",
+        "correlations": []
+      }
+    }
+  },
+  {
+    "name": "str_1",
+    "count": 200,
+    "invalid_data": 10,
+    "type": "string",
+    "stats":
+    {}
+  },
+  {
+    "name": "cat_2",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "h",
+        "value": 45
+      },
+      {
+        "name": "i",
+        "value": 62
+      },
+      {
+        "name": "j",
+        "value": 52
+      },
+      {
+        "name": "k",
+        "value": 41
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_1",
+        "entries": [
+        {
+          "name": "h",
+          "series": [
+          {
+            "name": "a",
+            "value": 6
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 7
+          },
+          {
+            "name": "d",
+            "value": 9
+          },
+          {
+            "name": "e",
+            "value": 7
+          },
+          {
+            "name": "f",
+            "value": 7
+          },
+          {
+            "name": "g",
+            "value": 5
+          }]
+        },
+        {
+          "name": "i",
+          "series": [
+          {
+            "name": "a",
+            "value": 7
+          },
+          {
+            "name": "b",
+            "value": 7
+          },
+          {
+            "name": "c",
+            "value": 10
+          },
+          {
+            "name": "d",
+            "value": 12
+          },
+          {
+            "name": "e",
+            "value": 6
+          },
+          {
+            "name": "f",
+            "value": 9
+          },
+          {
+            "name": "g",
+            "value": 11
+          }]
+        },
+        {
+          "name": "j",
+          "series": [
+          {
+            "name": "a",
+            "value": 9
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 11
+          },
+          {
+            "name": "d",
+            "value": 5
+          },
+          {
+            "name": "e",
+            "value": 10
+          },
+          {
+            "name": "f",
+            "value": 4
+          },
+          {
+            "name": "g",
+            "value": 9
+          }]
+        },
+        {
+          "name": "k",
+          "series": [
+          {
+            "name": "a",
+            "value": 8
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 1
+          },
+          {
+            "name": "d",
+            "value": 6
+          },
+          {
+            "name": "e",
+            "value": 4
+          },
+          {
+            "name": "f",
+            "value": 8
+          },
+          {
+            "name": "g",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "dis_cde_1",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "distinct_code",
+    "stats":
+    {
+      "code_length": 40
+    }
+  },
+  {
+    "name": "cat_1",
+    "count": 200,
+    "invalid_data": 10,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "a",
+        "value": 30
+      },
+      {
+        "name": "b",
+        "value": 19
+      },
+      {
+        "name": "c",
+        "value": 29
+      },
+      {
+        "name": "d",
+        "value": 32
+      },
+      {
+        "name": "e",
+        "value": 27
+      },
+      {
+        "name": "f",
+        "value": 28
+      },
+      {
+        "name": "g",
+        "value": 35
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_2",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "cat_2",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "h",
+        "value": 45
+      },
+      {
+        "name": "i",
+        "value": 62
+      },
+      {
+        "name": "j",
+        "value": 52
+      },
+      {
+        "name": "k",
+        "value": 41
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_1",
+        "entries": [
+        {
+          "name": "h",
+          "series": [
+          {
+            "name": "a",
+            "value": 6
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 7
+          },
+          {
+            "name": "d",
+            "value": 9
+          },
+          {
+            "name": "e",
+            "value": 7
+          },
+          {
+            "name": "f",
+            "value": 7
+          },
+          {
+            "name": "g",
+            "value": 5
+          }]
+        },
+        {
+          "name": "i",
+          "series": [
+          {
+            "name": "a",
+            "value": 7
+          },
+          {
+            "name": "b",
+            "value": 7
+          },
+          {
+            "name": "c",
+            "value": 10
+          },
+          {
+            "name": "d",
+            "value": 12
+          },
+          {
+            "name": "e",
+            "value": 6
+          },
+          {
+            "name": "f",
+            "value": 9
+          },
+          {
+            "name": "g",
+            "value": 11
+          }]
+        },
+        {
+          "name": "j",
+          "series": [
+          {
+            "name": "a",
+            "value": 9
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 11
+          },
+          {
+            "name": "d",
+            "value": 5
+          },
+          {
+            "name": "e",
+            "value": 10
+          },
+          {
+            "name": "f",
+            "value": 4
+          },
+          {
+            "name": "g",
+            "value": 9
+          }]
+        },
+        {
+          "name": "k",
+          "series": [
+          {
+            "name": "a",
+            "value": 8
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 1
+          },
+          {
+            "name": "d",
+            "value": 6
+          },
+          {
+            "name": "e",
+            "value": 4
+          },
+          {
+            "name": "f",
+            "value": 8
+          },
+          {
+            "name": "g",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "dis_cde_1",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "distinct_code",
+    "stats":
+    {
+      "code_length": 40
+    }
+  },
+  {
+    "name": "cat_1",
+    "count": 200,
+    "invalid_data": 10,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "a",
+        "value": 30
+      },
+      {
+        "name": "b",
+        "value": 19
+      },
+      {
+        "name": "c",
+        "value": 29
+      },
+      {
+        "name": "d",
+        "value": 32
+      },
+      {
+        "name": "e",
+        "value": 27
+      },
+      {
+        "name": "f",
+        "value": 28
+      },
+      {
+        "name": "g",
+        "value": 35
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_2",
+        "entries": [
+        {
+          "name": "a",
+          "series": [
+          {
+            "name": "h",
+            "value": 6
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "b",
+          "series": [
+          {
+            "name": "h",
+            "value": 4
+          },
+          {
+            "name": "i",
+            "value": 7
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 4
+          }]
+        },
+        {
+          "name": "c",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 10
+          },
+          {
+            "name": "j",
+            "value": 11
+          },
+          {
+            "name": "k",
+            "value": 1
+          }]
+        },
+        {
+          "name": "d",
+          "series": [
+          {
+            "name": "h",
+            "value": 9
+          },
+          {
+            "name": "i",
+            "value": 12
+          },
+          {
+            "name": "j",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 6
+          }]
+        },
+        {
+          "name": "e",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 6
+          },
+          {
+            "name": "j",
+            "value": 10
+          },
+          {
+            "name": "k",
+            "value": 4
+          }]
+        },
+        {
+          "name": "f",
+          "series": [
+          {
+            "name": "h",
+            "value": 7
+          },
+          {
+            "name": "i",
+            "value": 9
+          },
+          {
+            "name": "j",
+            "value": 4
+          },
+          {
+            "name": "k",
+            "value": 8
+          }]
+        },
+        {
+          "name": "g",
+          "series": [
+          {
+            "name": "h",
+            "value": 5
+          },
+          {
+            "name": "i",
+            "value": 11
+          },
+          {
+            "name": "j",
+            "value": 9
+          },
+          {
+            "name": "k",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "name": "cat_2",
+    "count": 200,
+    "invalid_data": 0,
+    "type": "categorical",
+    "stats":
+    {
+      "class_count": [
+      {
+        "name": "h",
+        "value": 45
+      },
+      {
+        "name": "i",
+        "value": 62
+      },
+      {
+        "name": "j",
+        "value": 52
+      },
+      {
+        "name": "k",
+        "value": 41
+      }],
+      "cross_tabs": [
+      {
+        "against": "cat_1",
+        "entries": [
+        {
+          "name": "h",
+          "series": [
+          {
+            "name": "a",
+            "value": 6
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 7
+          },
+          {
+            "name": "d",
+            "value": 9
+          },
+          {
+            "name": "e",
+            "value": 7
+          },
+          {
+            "name": "f",
+            "value": 7
+          },
+          {
+            "name": "g",
+            "value": 5
+          }]
+        },
+        {
+          "name": "i",
+          "series": [
+          {
+            "name": "a",
+            "value": 7
+          },
+          {
+            "name": "b",
+            "value": 7
+          },
+          {
+            "name": "c",
+            "value": 10
+          },
+          {
+            "name": "d",
+            "value": 12
+          },
+          {
+            "name": "e",
+            "value": 6
+          },
+          {
+            "name": "f",
+            "value": 9
+          },
+          {
+            "name": "g",
+            "value": 11
+          }]
+        },
+        {
+          "name": "j",
+          "series": [
+          {
+            "name": "a",
+            "value": 9
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 11
+          },
+          {
+            "name": "d",
+            "value": 5
+          },
+          {
+            "name": "e",
+            "value": 10
+          },
+          {
+            "name": "f",
+            "value": 4
+          },
+          {
+            "name": "g",
+            "value": 9
+          }]
+        },
+        {
+          "name": "k",
+          "series": [
+          {
+            "name": "a",
+            "value": 8
+          },
+          {
+            "name": "b",
+            "value": 4
+          },
+          {
+            "name": "c",
+            "value": 1
+          },
+          {
+            "name": "d",
+            "value": 6
+          },
+          {
+            "name": "e",
+            "value": 4
+          },
+          {
+            "name": "f",
+            "value": 8
+          },
+          {
+            "name": "g",
+            "value": 10
+          }]
+        }]
+      }]
+    }
+  }]
+}
