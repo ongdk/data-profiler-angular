@@ -16,4 +16,9 @@ export class DataService {
   getDbTableNames(){
   	return this.httpService.get('./assets/db_table_names.json');
   }
+
+  //temporary function for use in Demo. Get specific table.
+  getDataTemp(table: string){
+  	return this.httpService.get('./assets/'+table+'.json');
+  }
 }

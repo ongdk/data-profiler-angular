@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
     console.log("fetching Database: "+dbName+" , Table: "+ tableName);
+    
   }
 
   setCol(column: Column){
