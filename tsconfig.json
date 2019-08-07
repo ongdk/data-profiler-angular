@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
-  "compilerOptions": {
+  "compilerOptions":
+  {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -19,7 +20,8 @@
       "dom"
     ]
   },
-  "angularCompilerOptions": {
+  "angularCompilerOptions":
+  {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }

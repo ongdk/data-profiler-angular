@@ -28,6 +28,7 @@
     "@progress/kendo-angular-l10n": "^2.0.0",
     "@progress/kendo-angular-popup": "^3.0.0",
     "@progress/kendo-drawing": "^1.1.2",
+    "@progress/kendo-theme-default": "latest",
     "@swimlane/ngx-charts": "^12.0.1",
     "@swimlane/ngx-datatable": "^15.0.2",
     "bootstrap": "^4.3.1",
@@ -38,20 +39,20 @@
     "ngx-tooltip": "0.0.9",
     "ngx-ui-switch": "^1.6.0",
     "popper.js": "^1.15.0",
+    "require": "^2.4.20",
     "rxjs": "~6.4.0",
     "tether": "^1.4.7",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1",
-    "@progress/kendo-theme-default": "latest"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.2",
     "@angular/cli": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^8.10.51",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -64,5 +65,10 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

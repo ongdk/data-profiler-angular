@@ -1,5 +1,5 @@
 {
-  "file_name": "parq_name",
+  "file_name": "table2a",
   "table_type":"transactional",
   "columns": [
   {
@@ -1826,13 +1826,13 @@
     "stats":
     {
       "percentiles": {
-    "lower": 32,
-    "q1": 100,
-    "median": 243,
-    "q3": 1548.55,
-    "upper": 200000,
-    "mean": 2475.234,
-    "outliers": [0.01, 285255.00]
+    "lower": 1.3,
+    "q1": 2.15,
+    "median": 2.95,
+    "q3": 3.725,
+    "upper": 4.7,
+    "mean": 2.9,
+    "outliers": [1, 9]
 },
       "numeric_stats":{
         "count":"321",

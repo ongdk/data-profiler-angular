@@ -39,8 +39,7 @@ export class Stat{
     "average_num_ent": number;
     "earliest":string;
     "latest":string;
-    "percentiles":[];
-    "test_percentiles":Percentile;
+    "percentiles":Percentiles;
     "numeric_stats":NumericStats;
 }
 
