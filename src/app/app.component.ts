@@ -21,11 +21,12 @@ export class AppComponent implements OnInit {
   selectedDb: DbTableNames;
   selectedCol: Column = null;
 
+  error:string;
+
   dbString: string = 'Select a Database';
   tableString: string = 'Select a Table';
 
   ngOnInit() {
-    this.getData();
     this.getDbTableNames();
   }
 
@@ -34,7 +35,6 @@ export class AppComponent implements OnInit {
     data => {
       this.data = data as Data;
       this.dispStat();
-      this.selectedCol = this.data.columns[4];
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
@@ -62,13 +62,26 @@ export class AppComponent implements OnInit {
   setTable(table: Table){
     this.tableString = table.name;
     this.getTable(this.selectedDb.name, table.name);
-    this.getData();
   }
 
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
     console.log("fetching Database: "+dbName+" , Table: "+ tableName);
-    
+    this.getDataTemp(tableName);
+  }
+
+  getDataTemp(table:string){
+    this.dataService.getDataTemp(table).subscribe(
+    data => {
+      this.data = data as Data;
+      this.dispStat();
+    },
+    (err: HttpErrorResponse) => {
+      console.log(err.message);
+      this.data=null;
+      this.error=err.message;
+     }
+    );
   }
 
   setCol(column: Column){

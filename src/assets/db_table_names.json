@@ -3,7 +3,7 @@
   "name": "db1",
   "tables": [
   {
-    "name": "table1a"
+    "name": "tehcent"
   },
   {
     "name": "table1b"
@@ -16,7 +16,7 @@
   "name": "db2",
   "tables": [
   {
-    "name": "table2a"
+    "name": "tflmaho"
   },
   {
     "name": "table2b"

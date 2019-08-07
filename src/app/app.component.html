@@ -59,7 +59,8 @@
       </ng-container>
         <ng-container *ngIf=!data>
           <div>
-          <h2>Please select a table to be displayed.</h2>
+          <h2 *ngIf="!error">Please select a table to be displayed.</h2>
+          <h5 *ngIf="error" style="color: #D8000C;background-color: #FFD2D2;margin:10px 22px;font-size:2em;vertical-align:middle">{{error}}</h5>
         </div>
       </ng-container>
       </div>

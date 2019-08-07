@@ -19,6 +19,6 @@ export class DataService {
 
   //temporary function for use in Demo. Get specific table.
   getDataTemp(table: string){
-  	return this.httpService.get('./assets/'+table+'.json');
+  	return this.httpService.get('./assets/tables/'+table+'.json');
   }
 }
