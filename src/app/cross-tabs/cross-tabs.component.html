@@ -1,6 +1,15 @@
 <h2>Cross tabs</h2>
 <p>Comparing against other categorical columns within the same table</p>
-<div class="tabs" align-items="center">
+<!-- <div class="tabs" align-items="center">
 	<a *ngFor = "let cross_tab of cross_tabs" class="tab" (click)=selectTab(cross_tab) [class.selected]="cross_tab===selected" style="cursor: pointer;">{{name}} vs {{cross_tab.against}}</a>
+</div> -->
+<div class="dropdown" id="dropdown" style="padding-bottom:1em;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{name}} vs {{selected.against}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a *ngFor="let cross_tab of cross_tabs" (click)="selectTab(cross_tab)" class="dropdown-item" style="cursor: pointer;">{{name}} vs {{cross_tab.against}}</a>
+  </div>
 </div>
+
 <cross-tab [cross_tab]=selected [name]=name></cross-tab>

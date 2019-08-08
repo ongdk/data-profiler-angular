@@ -5,7 +5,9 @@
   padding:0;
   margin:0;
 }
-
+.row{
+  margin:0;
+}
 table {
   overflow: hidden;
   width: 100%;
