@@ -25,11 +25,12 @@ export class PageComponent implements OnInit {
   selectedCol: Column;
 
   error:string;
+
   constructor(
   	private dataService: DataService,
   	private route: ActivatedRoute,
   	private location: Location
- ) { }
+ ) {}
 
   ngOnInit() {
   	this.dbString = this.route.snapshot.paramMap.get('db');
