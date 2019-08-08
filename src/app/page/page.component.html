@@ -1,1 +1,62 @@
-<p>page works!</p>
+<div class="row">
+  <div class="bd-sidebar">
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header" routerLink="" style="cursor: pointer;">
+          <h3>Data Profiler</h3>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ dbString }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a *ngFor="let db of data_table_names" (click)="setDb(db)" class="dropdown-item" style="cursor: pointer;">{{ db.name }}</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ tableString }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a *ngFor="let table of selectedDb?.tables" (click)="setTable(table.name)" class="dropdown-item" routerLink="/{{dbString}}/{{table.name}}">{{ table.name }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="data">
+          <ul class="list-unstyled components">
+            <p>Table name: {{ data?.file_name }}</p>
+            <div id="columns-container">
+              <div>
+                <li class="column" [class.selectedCol]="selectedCol===null" (click)=dispStat()><a routerLink="/{{dbString}}/{{tableString}}/stats">Table Statistics</a></li>
+                <li *ngFor="let col of data?.columns" class="column" [class.selectedCol]="col === selectedCol" (click)=setCol(col)>
+                  <a routerLink="/{{dbString}}/{{tableString}}/{{col.name}}">{{ col.name }}</a>
+                </li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="bd-content">
+    <div class="container">
+      <h5 *ngIf="error" style="color: #D8000C;background-color: #FFD2D2;margin:10px 22px;font-size:2em;vertical-align:middle">{{error}}</h5>
+      <div *ngIf="!error">
+        <ng-container *ngIf="data">
+          <div>
+            <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
+          </div>
+        </ng-container>
+        <ng-container *ngIf=!data>
+          <div>
+            <h2>Please select a table to be displayed.</h2>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
