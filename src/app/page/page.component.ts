@@ -69,6 +69,8 @@ export class PageComponent implements OnInit {
   }
   setTable(table_name: string){
   	this.error='';
+    this.selectedCol=null;
+    this.colString=null;
     this.getTable(this.selectedDb.name, table_name);
     this.tableString = table_name;
   }

@@ -196,7 +196,7 @@
     }
   },
   {
-    "name": "dis_cde_1",
+    "name": "dis_cde_2",
     "count": 200,
     "invalid_data": 0,
     "type": "distinct_code",
@@ -206,7 +206,7 @@
     }
   },
   {
-    "name": "cat_1",
+    "name": "cat_3",
     "count": 200,
     "invalid_data": 10,
     "type": "categorical",
@@ -2088,7 +2088,7 @@
     }
   },
   {
-    "name": "cat_2",
+    "name": "cat_4",
     "count": 200,
     "invalid_data": 0,
     "type": "categorical",
@@ -2255,7 +2255,7 @@
     {}
   },
   {
-    "name": "dis_cde_1",
+    "name": "dis_cde_4",
     "count": 200,
     "invalid_data": 0,
     "type": "distinct_code",
@@ -2265,7 +2265,7 @@
     }
   },
   {
-    "name": "cat_2",
+    "name": "cat_5",
     "count": 200,
     "invalid_data": 0,
     "type": "categorical",
@@ -2424,7 +2424,7 @@
     }
   },
   {
-    "name": "cat_2",
+    "name": "cat_6",
     "count": 200,
     "invalid_data": 0,
     "type": "categorical",
@@ -2583,7 +2583,7 @@
     }
   },
   {
-    "name": "cat_1",
+    "name": "cat_7",
     "count": 200,
     "invalid_data": 10,
     "type": "categorical",
@@ -2766,7 +2766,7 @@
     }
   },
   {
-    "name": "cat_1",
+    "name": "cat_8",
     "count": 200,
     "invalid_data": 10,
     "type": "categorical",
@@ -2949,7 +2949,7 @@
     }
   },
   {
-    "name": "cat_1",
+    "name": "cat_9",
     "count": 200,
     "invalid_data": 10,
     "type": "categorical",
