@@ -85,9 +85,22 @@ export class PageComponent implements OnInit {
     this.dataService.getData().subscribe(
     data => {
       this.data = data as Data;
+      if(this.colString){
+        if (this.colString!="stats"){
+          for (var i in this.data.columns){
+            if (this.data.columns[i].name == this.colString){
+              this.selectedCol = this.data.columns[i];
+            };
+          };
+          if ( !this.selectedCol){ this.error="Column with name '"+this.colString+"' does not exist in table '"+this.tableString+" '."};
+        }
+        else{this.selectedCol=null};
+    };
     },
     (err: HttpErrorResponse) => {
       console.log(err.message);
+      this.data=null;
+      this.error=err.message;
      }
     );
   }
