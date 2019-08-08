@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageComponent } from './page/page.component'
-
 const routes: Routes = [
 	{ path: '', component:PageComponent  },
 	{ path: ':db/:table', redirectTo: ':db/:table/stats'},
-	{ path: ':db/:table/:col', component:PageComponent}
+	{ path: ':db/:table',
+		children:[
+		{
+			path:':col',
+			component:PageComponent,
+		}
+		]}
 ];
 
 @NgModule({
