@@ -85,8 +85,10 @@ a, a:hover, a:focus {
 
 #sidebar ul p {
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px;
     margin:0;
+    font-size: 1.2em;
+    display: block;
 }
 
 #sidebar ul li a {
@@ -119,10 +121,10 @@ a, a:hover, a:focus {
     background: #F0F0F0;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
+/*#sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #3d8dbd;
-}
+}*/
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;

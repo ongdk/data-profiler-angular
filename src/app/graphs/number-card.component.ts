@@ -25,7 +25,7 @@ export class NumberCardComponent implements OnInit {
   append(column: Column){
   	this.cards.push({"name": "Distinct Count","value":column.count},
   		{"name": "Missing Data","value":column.invalid_data},
-  		{"name": "Valid Data (%)","value":100*(column.count-column.invalid_data)/column.count})
+  		{"name": `Non "Nan" values (%)`,"value":100*(column.count-column.invalid_data)/column.count})
     switch (column.type) {
       case "categorical":
         this.size ="small";
