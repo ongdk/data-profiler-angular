@@ -150,12 +150,12 @@ export class PageComponent implements OnInit {
       let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF 
       pdf.addImage(contentDataURL, 'PNG', 0, 7+position, imgWidth, imgHeight)  
       pdf.text(13, 10,'Database: '+this.dbString+ ' , Table: '+this.tableString);
-      heightLeft -= (pageHeight-7);
+      heightLeft -= (pageHeight-7)-3;
   while (heightLeft >= 0) {
     position = heightLeft - imgHeight;
         pdf.addPage();
     pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight + 15);
-    heightLeft -= pageHeight;
+    heightLeft -= pageHeight-3;
   }
       pdf.save(this.tableString+'_'+this.colString+'.pdf'); // Generated PDF
     });  
