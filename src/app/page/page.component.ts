@@ -138,7 +138,7 @@ export class PageComponent implements OnInit {
   }
 
   captureScreen(){
-    var data = document.getElementById('contentToConvert');  
+    var data = document.getElementById('contentToConvert'); 
     html2canvas(data).then(canvas => {  
       // Few necessary setting options  
       var imgWidth = 208;   
