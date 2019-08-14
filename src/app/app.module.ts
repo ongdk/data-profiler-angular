@@ -16,6 +16,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 
+import * as jsPDF from 'jspdf';
+import html2canvas from 'html2canvas'; 
 
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
@@ -24,6 +26,7 @@ import { TableComponent } from './table/table.component';
 import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
 import { BoxPlotComponent } from './box-plot/box-plot.component';
 import { PageComponent } from './page/page.component';
+import { PrintOutComponent } from './print-out/print-out.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { PageComponent } from './page/page.component';
     TableComponent,
     CrossTabsComponent,
     BoxPlotComponent,
-    PageComponent
+    PageComponent,
+    PrintOutComponent
   ],
   imports: [
     BrowserModule,

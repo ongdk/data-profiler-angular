@@ -1,23 +1,22 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Data } from '../data';
 import { Column } from '../column';
 
 @Component({
-  selector: 'app-data',
-  templateUrl: './data.component.html',
-  styleUrls: ['./data.component.css']
+  selector: 'print-out',
+  templateUrl: './print-out.component.html',
+  styleUrls: ['./print-out.component.css']
 })
-export class DataComponent implements OnInit{
-  @Input() data: Data;
-  @Input() selectedCol: Column;
-
-
+export class PrintOutComponent implements OnInit {
+  @Input() data:Data;
+  @Input() selectedCol:Column;
   cards = [];
   pie = [];
 
   constructor() { }
 
   ngOnInit() {
+  console.log(this.data.columns);
   this.append(this.data);
 }
 

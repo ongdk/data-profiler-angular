@@ -5,9 +5,11 @@ import { Data } from '../data';
 import { DbTableNames, Table } from '../db_table_names';
 import { Column } from '../column';
 
-
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
+import * as jspdf from 'jspdf';  
+import html2canvas from 'html2canvas';  
 
 @Component({
   selector: 'app-page',
@@ -50,7 +52,6 @@ export class PageComponent implements OnInit {
 	  			if (this.data_table_names[i].name == this.dbString){
 	  				this.selectedDb = this.data_table_names[i];
 	  			};
-	  			console.log(this.data_table_names[i].name, this.dbString,this.selectedDb);
 	  		};
 	  		if ( !this.selectedDb){ this.error="Database with name '"+this.dbString+"' does not exist."};
   	}
@@ -77,7 +78,6 @@ export class PageComponent implements OnInit {
   getTable(dbName: string, tableName: string){
     //API call. Put corresponding table at asset/data.JSON
     this.data=null;
-    console.log("fetching Database: "+dbName+" , Table: "+ tableName);
     //this.getData();
     this.getDataTemp(tableName);
   }
@@ -135,5 +135,22 @@ export class PageComponent implements OnInit {
   dispStat(){
     this.colString = "stats";
     this.selectedCol=null;
+  }
+
+  captureScreen(){
+    var data = document.getElementById('contentToConvert');  
+    html2canvas(data).then(canvas => {  
+      // Few necessary setting options  
+      var imgWidth = 208;   
+      var pageHeight = 295;    
+      var imgHeight = canvas.height * imgWidth / canvas.width;  
+      var heightLeft = imgHeight;  
+  
+      const contentDataURL = canvas.toDataURL('image/png')  
+      let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+      var position = 0;  
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+      pdf.save(this.tableString+'_'+this.colString+'.pdf'); // Generated PDF
+    });  
   }
 }

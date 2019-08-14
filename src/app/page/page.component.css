@@ -137,3 +137,26 @@ ul ul a {
 }
 
 .k-marquee-color{background-color: #3d8dbd94;}
+
+#capture{
+  position: fixed;
+  right:4em;
+  z-index: 2;
+  border-color: #343A4090;
+  background-color: white;
+  padding-right: 14px;
+  margin-top: 2em;
+}
+
+#capture:Hover{
+  background-color: #343A40;
+  color: white;
+}
+
+ #capture:before {
+   content: url(../../assets/pdf.svg);
+   width: 20px;
+   float: left;
+   margin-top: 3px;
+   margin-right: 5px;
+ }
