@@ -147,9 +147,11 @@ export class PageComponent implements OnInit {
       var heightLeft = imgHeight;  
   
       const contentDataURL = canvas.toDataURL('image/png')  
-      let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-      var position = 0;  
-      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+      let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF 
+      pdf.addImage(contentDataURL, 'PNG', 0, 7, imgWidth, imgHeight)  
+
+      pdf.text(13, 10,'Database: '+this.dbString+ ' , Table: '+this.tableString);
+
       pdf.save(this.tableString+'_'+this.colString+'.pdf'); // Generated PDF
     });  
   }
