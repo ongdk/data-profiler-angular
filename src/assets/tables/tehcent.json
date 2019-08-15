@@ -1872,7 +1872,7 @@
     "invalid_data": 4,
     "type": "nominal_numeric",
     "stats":
-    {
+    {"test":[0,5,35,60,90,95,110,150,200,500,1000],
       "percentiles":
       {
         "lower": 1.3,

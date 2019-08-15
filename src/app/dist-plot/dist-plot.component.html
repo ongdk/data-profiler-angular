@@ -1,1 +1,12 @@
-<p>dist-plot works!</p>
+ <h2>Distrubution Curve</h2>
+
+<div class="row"><div class="col-12">
+	<kendo-chart renderAs="canvas" [pannable]="true" [zoomable]="true">
+		<kendo-chart-title text="Distribution"></kendo-chart-title>
+		<kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
+		<kendo-chart-series>
+			<kendo-chart-series-item [style]="'smooth'" type="scatterLine" [data]="series" [markers]="{visible:true}">
+			</kendo-chart-series-item>
+		</kendo-chart-series>
+	</kendo-chart>
+</div></div>
