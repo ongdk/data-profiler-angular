@@ -26,6 +26,7 @@ import { TableComponent } from './table/table.component';
 import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
 import { BoxPlotComponent } from './box-plot/box-plot.component';
 import { PageComponent } from './page/page.component';
+import { DistPlotComponent } from './dist-plot/dist-plot.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PageComponent } from './page/page.component';
     TableComponent,
     CrossTabsComponent,
     BoxPlotComponent,
-    PageComponent
+    PageComponent,
+    DistPlotComponent
   ],
   imports: [
     BrowserModule,
