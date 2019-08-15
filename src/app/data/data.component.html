@@ -29,7 +29,7 @@
             <p> Type : {{ col.type }} </p>
             <ngx-number-card [column]=col></ngx-number-card>
             <ng-container *ngIf="col.type==='nominal_numeric'">
-              <dist-plot [percentiles]="col.stats.test"></dist-plot>
+              <!-- <dist-plot [percentiles]="col.stats.test"></dist-plot> -->
               <box-plot [percentiles]="col.stats.percentiles"></box-plot>
             </ng-container>
             <ng-container *ngIf="col.type==='categorical'">
