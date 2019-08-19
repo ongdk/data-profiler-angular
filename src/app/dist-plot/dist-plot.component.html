@@ -4,9 +4,11 @@
 	<kendo-chart renderAs="canvas" [pannable]="true" [zoomable]="true">
 		<kendo-chart-title text="Distribution"></kendo-chart-title>
 		<kendo-chart-tooltip format="{0} , {1}"></kendo-chart-tooltip>
+          <kendo-chart-legend position="bottom" orientation="horizontal">
+          </kendo-chart-legend>
 		<kendo-chart-series>
 			<kendo-chart-x-axis>
-				<kendo-chart-x-axis-item [title]="{text:'Values'}"></kendo-chart-x-axis-item>
+				<kendo-chart-x-axis-item [title]="{text:'Values'}" [notes]="notesConfig"></kendo-chart-x-axis-item>
 			</kendo-chart-x-axis>
 			<kendo-chart-y-axis>
 				<kendo-chart-y-axis-item [title]="{text:'Counts'}"></kendo-chart-y-axis-item>

@@ -1872,21 +1872,11 @@
     "invalid_data": 4,
     "type": "nominal_numeric",
     "stats":
-    {"test":[0,5,35,60,90,95,110,150,200,500,1000],
-      "percentiles":
-      {
-        "lower": 5,
-        "q1": 47.5,
-        "median": 110,
-        "q3": 175,
-        "upper": 500,
-        "mean": 120,
-        "outliers": [0, 1000]
-      },
+    {"percentiles":[0,5,35,60,90,95,110,150,200,500,1000],
       "numeric_stats":
       {
         "count": "321",
-        "mean": "2475.234",
+        "mean": "120",
         "stddev": "20867.1231",
         "min": "0.01",
         "max": "285255.00",

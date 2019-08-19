@@ -8,7 +8,7 @@ import { Column } from "../column";
   <ngx-charts-number-card [results]="cards" [scheme]="scheme" (select)="onSelect($event)"></ngx-charts-number-card>
   </div></div>
   `,
-  styles: [`.small{height:25vh;}`,`.medium{height:35vh;}`,`.large{height:40vh;}`]
+  styles: [`.small{height:200px;}`,`.medium{height:250px;}`,`.large{height:300px;}`]
 })
 export class NumberCardComponent implements OnInit {
   @Input() column: Column;

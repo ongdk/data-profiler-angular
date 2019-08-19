@@ -7,12 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DistPlotComponent implements OnInit {
   @Input() percentiles:number[];
+  @Input() mean: number;
   series: number[][]=[];
+  median: number;
+  public notesConfig: {};
 
   constructor() { }
 
   ngOnInit() {
   	this.append();
+  	this.median = this.percentiles[5];
   }
 
   append(){
@@ -22,7 +26,58 @@ export class DistPlotComponent implements OnInit {
   		var higher = this.percentiles[i+1];
   		this.series.push([(higher+lower)*0.5,diff/(higher-lower)]);
   	}
-    console.log(this.series);
+	this.notesConfig = {
+	  data: [{
+	      value: this.mean,
+	      label:{
+	      	text:"Mean",
+	      	color:'#3d8dbd',
+	      	position: 'outside'
+	      },
+	      line: {
+		    color: '#3d8dbd',
+		    length: 282,
+		    width: 2
+		  }
+	    }, {
+	      value: this.percentiles[5],
+	      label:{
+	      	text:"Median",
+	      	color:'#3d8dbd',
+	      	position: 'outside'
+	      },
+	      line: {
+		    color: '#3d8dbd',
+		    dashType: 'dash',
+		    length: 282,
+		    width: 2
+		  }},{
+	      value: this.percentiles[2],
+	      label:{
+	      	text:"Q1",
+	      	color:'#3d8dbd',
+	      	position: 'outside'
+	      },
+	      line: {
+		    color: '#3d8dbd',
+		    dashType: 'dot',
+		    length: 282,
+		    width: 2
+		  }},{
+	      value: this.percentiles[7],
+	      label:{
+	      	text:"Q3",
+	      	color:'#3d8dbd',
+	      	position: 'outside'
+	      },
+	      line: {
+		    color: '#3d8dbd',
+		    dashType: 'dot',
+		    length: 282,
+		    width: 2
+		  }
+	    }],
+	  position: "top"
+	};
   }
-
 }
