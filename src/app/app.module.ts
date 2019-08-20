@@ -15,9 +15,6 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 
-import * as jsPDF from 'jspdf';
-import html2canvas from 'html2canvas'; 
-
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
 import { CrossTabComponent } from './graphs/cross-tab.component';

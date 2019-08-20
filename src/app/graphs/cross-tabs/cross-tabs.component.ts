@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
-import { CrossTab } from '../column';
+import { CrossTab } from '../../column';
 
 @Component({
   selector: 'cross-tabs',

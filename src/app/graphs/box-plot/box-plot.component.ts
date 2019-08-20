@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Percentiles } from '../column';
+import { Percentiles } from '../../column';
 @Component({
   selector: 'box-plot',
   templateUrl: './box-plot.component.html',

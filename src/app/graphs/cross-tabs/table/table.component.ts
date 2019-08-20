@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Column, CrossTab } from '../column';
+import { Column, CrossTab } from '../../../column';
 
 @Component({
   selector: 'cross-tab-table',
