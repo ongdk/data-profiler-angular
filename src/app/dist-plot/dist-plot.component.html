@@ -8,7 +8,8 @@
           </kendo-chart-legend>
 		<kendo-chart-series>
 			<kendo-chart-x-axis>
-				<kendo-chart-x-axis-item [title]="{text:'Values'}" [notes]="notesConfig"></kendo-chart-x-axis-item>
+				<kendo-chart-x-axis-item *ngIf="checked == true" [title]="{text:'Values'}" [notes]="notesConfig"></kendo-chart-x-axis-item>
+				<kendo-chart-x-axis-item *ngIf="checked == false" [title]="{text:'Values'}"></kendo-chart-x-axis-item>
 			</kendo-chart-x-axis>
 			<kendo-chart-y-axis>
 				<kendo-chart-y-axis-item [title]="{text:'Counts'}"></kendo-chart-y-axis-item>
@@ -18,3 +19,8 @@
 		</kendo-chart-series>
 	</kendo-chart>
 </div></div>
+
+<div class="row" style="vertical-align: middle;">
+  <p style="margin-top: 10px;">Toggle percentiles info</p>
+  <ui-switch [checked]="checked" switchColor="#fcfcfc" color="#3d8dbd" (change)="toggle()"></ui-switch>
+</div>

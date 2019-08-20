@@ -12,6 +12,8 @@ export class DistPlotComponent implements OnInit {
   median: number;
   public notesConfig: {};
 
+  checked = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -79,5 +81,9 @@ export class DistPlotComponent implements OnInit {
 	    }],
 	  position: "top"
 	};
+  }
+
+  toggle(){
+  	this.checked = !this.checked;
   }
 }
