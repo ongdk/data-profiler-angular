@@ -105,6 +105,8 @@ export class PageComponent implements OnInit {
     );
   }
   getDataTemp(table:string){
+    /*this is a temporary function to load files in the './assets/tables' folder for demo purpose.
+    After the API call function is completed, use getData() to load data.JSON into the UI*/
     this.dataService.getDataTemp(table).subscribe(
     data => {
         this.data = data as Data;
