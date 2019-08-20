@@ -10,7 +10,6 @@ import { DataComponent } from './data/data.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PinchZoomModule } from 'ngx-pinch-zoom';
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ChartsModule } from '@progress/kendo-angular-charts';
@@ -48,7 +47,6 @@ import { DistPlotComponent } from './graphs/dist-plot/dist-plot.component';
     NgxChartsModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    PinchZoomModule,
     UiSwitchModule,
     TooltipModule.forRoot(),
     ChartsModule
