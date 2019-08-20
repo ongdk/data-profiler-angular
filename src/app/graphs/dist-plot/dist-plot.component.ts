@@ -9,6 +9,8 @@ export class DistPlotComponent implements OnInit {
   @Input() percentiles:number[];
   @Input() mean: number;
   series: number[][]=[];
+  counts: number[]=[];
+  centers: number[]=[];
   median: number;
   public notesConfig: {};
 
@@ -24,16 +26,23 @@ export class DistPlotComponent implements OnInit {
   }
 
   append(){
-  	var diff = (this.percentiles[10]-this.percentiles[0])*0.1;
+  	var sum = 0;
   	for (var i = 0; i<10; i++){
   		var lower = this.percentiles[i];
   		var higher = this.percentiles[i+1];
+  		this.centers.push((higher+lower)*0.5);
   		if (higher == lower){
-  			this.series.push([(higher+lower)*0.5,1000000000]);
+  			var count = 1000000000;
   		}
 		else{
-			this.series.push([(higher+lower)*0.5,diff/(higher-lower)])
+			var count = 100/(higher-lower);
 		}
+		this.counts.push(count);
+		sum+=count;
+	}
+	console.log(sum);
+	for (var i = 0; i<10; i++){
+		this.series.push([this.centers[i],this.counts[i]/sum]);
   	}
 	this.notesConfig = {
 	  data: [{
