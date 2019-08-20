@@ -22,11 +22,11 @@ import html2canvas from 'html2canvas';
 import { BarChartComponent } from './graphs/bar-chart.component';
 import { NumberCardComponent } from './graphs/number-card.component';
 import { CrossTabComponent } from './graphs/cross-tab.component';
-import { TableComponent } from './table/table.component';
-import { CrossTabsComponent } from './cross-tabs/cross-tabs.component';
-import { BoxPlotComponent } from './box-plot/box-plot.component';
+import { TableComponent } from './graphs/cross-tabs/table/table.component';
+import { CrossTabsComponent } from './graphs/cross-tabs/cross-tabs.component';
+import { BoxPlotComponent } from './graphs/box-plot/box-plot.component';
 import { PageComponent } from './page/page.component';
-import { DistPlotComponent } from './dist-plot/dist-plot.component';
+import { DistPlotComponent } from './graphs/dist-plot/dist-plot.component';
 
 @NgModule({
   declarations: [
