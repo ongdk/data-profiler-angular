@@ -19,6 +19,8 @@ export class DistPlotComponent implements OnInit {
   ngOnInit() {
   	this.append();
   	this.median = this.percentiles[5];
+  	console.log(this.percentiles);
+  	console.log(this.series);
   }
 
   append(){
@@ -26,7 +28,12 @@ export class DistPlotComponent implements OnInit {
   	for (var i = 0; i<10; i++){
   		var lower = this.percentiles[i];
   		var higher = this.percentiles[i+1];
-  		this.series.push([(higher+lower)*0.5,diff/(higher-lower)]);
+  		if (higher == lower){
+  			this.series.push([(higher+lower)*0.5,1000000000]);
+  		}
+		else{
+			this.series.push([(higher+lower)*0.5,diff/(higher-lower)])
+		}
   	}
 	this.notesConfig = {
 	  data: [{

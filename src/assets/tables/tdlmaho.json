@@ -3893,5 +3893,24 @@
         }]
       }]
     }
+  },
+  {
+    "name": "nom_num_2",
+    "count": 223,
+    "invalid_data": 4,
+    "type": "nominal_numeric",
+    "stats":
+    {
+      "percentiles":[0,20.7,54,210,210,534,534,800,1050.1,2560.1,5318.55],
+      "numeric_stats":
+      {
+        "count": "321",
+        "mean": "97",
+        "stddev": "20867.1231",
+        "min": "0.01",
+        "max": "285255.00",
+        "correlations": []
+      }
+    }
   }]
 }
