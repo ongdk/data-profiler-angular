@@ -28,6 +28,8 @@ export class PageComponent implements OnInit {
 
   error:string;
 
+  filter:string;
+
   constructor(
   	private dataService: DataService,
   	private route: ActivatedRoute,
@@ -41,6 +43,10 @@ export class PageComponent implements OnInit {
   	this.getDbTableNames();
   	//this.getData();
   	if(this.tableString){this.getDataTemp(this.tableString)};
+  }
+
+  onSelect(filter: string){
+    this.filter = filter;
   }
 
   getDbTableNames(): void{
@@ -137,6 +143,9 @@ export class PageComponent implements OnInit {
   dispStat(){
     this.colString = "stats";
     this.selectedCol=null;
+  }
+  clearFilter(){
+    this.filter= null;
   }
 
   captureScreen(){

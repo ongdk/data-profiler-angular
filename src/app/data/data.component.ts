@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Data } from '../data';
 import { Column } from '../column';
 
@@ -10,7 +10,7 @@ import { Column } from '../column';
 export class DataComponent implements OnInit{
   @Input() data: Data;
   @Input() selectedCol: Column;
-
+  @Output() filter = new EventEmitter<string>();
 
   cards = [];
   pie = [];
@@ -69,5 +69,22 @@ export class DataComponent implements OnInit{
   schemePie =   {
     domain: ["#3d8dbd","#9dbbd4","#c4d3e0","#f3cfbc","#f5b48e","#f39960"]
   };
-
+  onSelect(event) {
+    switch (event.name) {
+      case "Distinct Code":
+        this.filter.emit("distinct_code");
+        break;
+      case "Categorical":
+        this.filter.emit("categorical");
+        break;
+      case "Datetime":
+        this.filter.emit("datetime");
+        break;
+      case "String":
+        this.filter.emit("string");
+        break;
+      case "Nominal Numeric":
+        this.filter.emit("nominal_numeric");
+        break;
+  }}
 }

@@ -29,11 +29,18 @@
         <div *ngIf="data">
           <ul class="list-unstyled components">
             <p>Table name: {{ data?.file_name }}</p>
+            <div *ngIf="filter">
+              <p> Showing only "{{filter}}" columns.</p>
+              <button class="btn" id="clear" (click)="clearFilter()">Clear</button>
+            </div>
             <div id="columns-container">
               <div>
                 <li class="column" [class.selectedCol]="selectedCol===null" (click)=dispStat()><a routerLink="/{{dbString}}/{{tableString}}/stats">Table Statistics</a></li>
                 <li *ngFor="let col of data?.columns" class="column" [class.selectedCol]="col === selectedCol" (click)=setCol(col)>
-                  <a routerLink="/{{dbString}}/{{tableString}}/{{col.name}}">{{ col.name }}</a>
+                  <a routerLink="/{{dbString}}/{{tableString}}/{{col.name}}" *ngIf="!filter">{{ col.name }}</a>
+                  <div *ngIf="filter">
+                    <a routerLink="/{{dbString}}/{{tableString}}/{{col.name}}" *ngIf="col.type == filter">{{ col.name }}</a>
+                  </div>
                 </li>
               </div>
             </div>
@@ -55,7 +62,7 @@
       <div *ngIf="!error">
         <ng-container *ngIf="data">
           <div>
-            <app-data [data]="data" [selectedCol]="selectedCol"></app-data>
+            <app-data [data]="data" [selectedCol]="selectedCol" (filter)="onSelect($event)"></app-data>
           </div>
         </ng-container>
         <ng-container *ngIf=!data>
