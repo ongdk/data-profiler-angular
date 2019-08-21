@@ -27,7 +27,7 @@
           <div>
             <h1>Column: {{ col.name }}</h1>
             <p> Type : {{ col.type }} </p>
-            <ngx-number-card [column]=col></ngx-number-card>
+            <ngx-number-card [column]=col [count]="data?.count"></ngx-number-card>
             <ng-container *ngIf="col.type==='nominal_numeric'">
               <dist-plot [percentiles]="col.stats.percentiles" [mean]="col.stats.numeric_stats.mean"></dist-plot>
               <box-plot [percentiles]="col.stats.percentiles" [mean]="col.stats.numeric_stats.mean"></box-plot>

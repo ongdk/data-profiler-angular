@@ -12,6 +12,7 @@ import { Column } from "../column";
 })
 export class NumberCardComponent implements OnInit {
   @Input() column: Column;
+  @Input() count: number;
   
   cards = [];
   size: string;
@@ -25,7 +26,7 @@ export class NumberCardComponent implements OnInit {
   append(column: Column){
   	this.cards.push({"name": "Distinct Count","value":column.count},
   		{"name": "Missing Data","value":column.invalid_data},
-  		{"name": `Non "Nan" values (%)`,"value":100*(column.count-column.invalid_data)/column.count})
+  		{"name": `Non "Nan" values (%)`,"value":100*(this.count-column.invalid_data)/this.count})
     switch (column.type) {
       case "categorical":
         this.size ="small";
